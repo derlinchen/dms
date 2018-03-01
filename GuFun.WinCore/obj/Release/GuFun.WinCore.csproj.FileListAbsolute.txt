@@ -1,0 +1,7 @@
+E:\Source\C#\DMS\GuFun.WinCore\bin\Release\GuFun.WinCore.dll
+E:\Source\C#\DMS\GuFun.WinCore\bin\Release\GuFun.WinCore.pdb
+E:\Source\C#\DMS\GuFun.WinCore\bin\Release\GuFun.Utils.dll
+E:\Source\C#\DMS\GuFun.WinCore\bin\Release\GuFun.Utils.pdb
+E:\Source\C#\DMS\GuFun.WinCore\obj\Release\GuFun.WinCore.csprojResolveAssemblyReference.cache
+E:\Source\C#\DMS\GuFun.WinCore\obj\Release\GuFun.WinCore.dll
+E:\Source\C#\DMS\GuFun.WinCore\obj\Release\GuFun.WinCore.pdb

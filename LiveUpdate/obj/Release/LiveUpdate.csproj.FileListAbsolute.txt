@@ -1,0 +1,12 @@
+E:\Source\C#\DMS\LiveUpdate\bin\Release\LiveUpdate.exe.config
+E:\Source\C#\DMS\LiveUpdate\bin\Release\LiveUpdate.exe
+E:\Source\C#\DMS\LiveUpdate\bin\Release\LiveUpdate.pdb
+E:\Source\C#\DMS\LiveUpdate\obj\Release\LiveUpdate.BaseDialogForm.resources
+E:\Source\C#\DMS\LiveUpdate\obj\Release\LiveUpdate.BaseForm.resources
+E:\Source\C#\DMS\LiveUpdate\obj\Release\LiveUpdate.Properties.Resources.resources
+E:\Source\C#\DMS\LiveUpdate\obj\Release\LiveUpdate.DownloadConfirm.resources
+E:\Source\C#\DMS\LiveUpdate\obj\Release\LiveUpdate.DownloadProgress.resources
+E:\Source\C#\DMS\LiveUpdate\obj\Release\LiveUpdate.csproj.GenerateResource.Cache
+E:\Source\C#\DMS\LiveUpdate\obj\Release\LiveUpdate.exe
+E:\Source\C#\DMS\LiveUpdate\obj\Release\LiveUpdate.pdb
+E:\Source\C#\DMS\LiveUpdate\obj\Release\LiveUpdate.csprojResolveAssemblyReference.cache

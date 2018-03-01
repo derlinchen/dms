@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE89D881-C1DA-444F-BCE8-9DD889987C02}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DMS</RootNamespace>
+    <AssemblyName>DMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Project\ManHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\ManHours.Designer.cs">
+      <DependentUpon>ManHours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\EditHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\EditHours.Designer.cs">
+      <DependentUpon>EditHours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\ConnectEncryptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\ConnectEncryptForm.Designer.cs">
+      <DependentUpon>ConnectEncryptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySql\GpersistCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MySql\GpersistCode.Designer.cs">
+      <DependentUpon>GpersistCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle\GpersistCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oracle\GpersistCode.Designer.cs">
+      <DependentUpon>GpersistCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\EditDeveloper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\EditDeveloper.Designer.cs">
+      <DependentUpon>EditDeveloper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\EditProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\EditProject.Designer.cs">
+      <DependentUpon>EditProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\ManProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\ManProject.Designer.cs">
+      <DependentUpon>ManProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\SetDeveloper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\SetDeveloper.Designer.cs">
+      <DependentUpon>SetDeveloper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServer\GpersistCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SqlServer\GpersistCode.Designer.cs">
+      <DependentUpon>GpersistCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\FirstLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\FirstLogin.Designer.cs">
+      <DependentUpon>FirstLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySql\ImportPdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MySql\ImportPdm.Designer.cs">
+      <DependentUpon>ImportPdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle\ImportPdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oracle\ImportPdm.Designer.cs">
+      <DependentUpon>ImportPdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Public\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\DeleteRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\DeleteRegister.Designer.cs">
+      <DependentUpon>DeleteRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\SetOnineMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\SetOnineMan.Designer.cs">
+      <DependentUpon>SetOnineMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\ResetMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\ResetMan.Designer.cs">
+      <DependentUpon>ResetMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\ManManTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\ManManTitle.Designer.cs">
+      <DependentUpon>ManManTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\ManManLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\ManManLevel.Designer.cs">
+      <DependentUpon>ManManLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\ManManType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\ManManType.Designer.cs">
+      <DependentUpon>ManManType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\ManDeptType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\ManDeptType.Designer.cs">
+      <DependentUpon>ManDeptType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BaseParamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\BaseParamForm.Designer.cs">
+      <DependentUpon>BaseParamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\EditSetRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\EditSetRole.Designer.cs">
+      <DependentUpon>EditSetRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\SetRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\SetRole.Designer.cs">
+      <DependentUpon>SetRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\EditRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\EditRole.Designer.cs">
+      <DependentUpon>EditRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\ManRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\ManRole.Designer.cs">
+      <DependentUpon>ManRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\EditMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\EditMan.Designer.cs">
+      <DependentUpon>EditMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="System\ManMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\ManMan.Designer.cs">
+      <DependentUpon>ManMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BaseListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\BaseListForm.Designer.cs">
+      <DependentUpon>BaseListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\ManDept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\ManDept.Designer.cs">
+      <DependentUpon>ManDept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServer\ImportPdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SqlServer\ImportPdm.Designer.cs">
+      <DependentUpon>ImportPdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BaseEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\BaseEditForm.Designer.cs">
+      <DependentUpon>BaseEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BaseDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\BaseDialogForm.Designer.cs">
+      <DependentUpon>BaseDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\ManCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\ManCompany.Designer.cs">
+      <DependentUpon>ManCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BaseListEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\BaseListEditForm.Designer.cs">
+      <DependentUpon>BaseListEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Public\DBConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Public\DBConfig.Designer.cs">
+      <DependentUpon>DBConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Flash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Public\Flash.Designer.cs">
+      <DependentUpon>Flash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Public\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Public\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\UnLockMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\UnLockMan.Designer.cs">
+      <DependentUpon>UnLockMan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Model\BaseParamForm.resx">
+      <DependentUpon>BaseParamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MySql\GpersistCode.resx">
+      <DependentUpon>GpersistCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MySql\ImportPdm.resx">
+      <DependentUpon>ImportPdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oracle\GpersistCode.resx">
+      <DependentUpon>GpersistCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oracle\ImportPdm.resx">
+      <DependentUpon>ImportPdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\EditDeveloper.resx">
+      <DependentUpon>EditDeveloper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\EditProject.resx">
+      <DependentUpon>EditProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\ManHours.resx">
+      <DependentUpon>ManHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\ManProject.resx">
+      <DependentUpon>ManProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\SetDeveloper.resx">
+      <DependentUpon>SetDeveloper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\EditHours.resx">
+      <DependentUpon>EditHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Public\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlServer\GpersistCode.resx">
+      <DependentUpon>GpersistCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\ConnectEncryptForm.resx">
+      <DependentUpon>ConnectEncryptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\DeleteRegister.resx">
+      <DependentUpon>DeleteRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\EditRole.resx">
+      <DependentUpon>EditRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\EditSetRole.resx">
+      <DependentUpon>EditSetRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\FirstLogin.resx">
+      <DependentUpon>FirstLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\ManRole.resx">
+      <DependentUpon>ManRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\EditMan.resx">
+      <DependentUpon>EditMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\ManMan.resx">
+      <DependentUpon>ManMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\BaseListForm.resx">
+      <DependentUpon>BaseListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlServer\ImportPdm.resx">
+      <DependentUpon>ImportPdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\BaseDialogForm.resx">
+      <DependentUpon>BaseDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\BaseEditForm.resx">
+      <DependentUpon>BaseEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\BaseListEditForm.resx">
+      <DependentUpon>BaseListEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Public\DBConfig.resx">
+      <DependentUpon>DBConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Public\Flash.resx">
+      <DependentUpon>Flash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Public\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="System\ManCompany.resx">
+      <DependentUpon>ManCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\ManDept.resx">
+      <DependentUpon>ManDept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\ResetMan.resx">
+      <DependentUpon>ResetMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\SetOnineMan.resx">
+      <DependentUpon>SetOnineMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\SetRole.resx">
+      <DependentUpon>SetRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\UnLockMan.resx">
+      <DependentUpon>UnLockMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GuFun.Utils\GuFun.Utils.csproj">
+      <Project>{0dd64f9e-a3be-46c3-a7c0-60045a06bf07}</Project>
+      <Name>GuFun.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GuFun.WinControls\GuFun.WinControls.csproj">
+      <Project>{04CFB4AB-2B4F-4B97-A2A8-A081DDFFE2D2}</Project>
+      <Name>GuFun.WinControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GuFun.WinCore\GuFun.WinCore.csproj">
+      <Project>{6357278a-01f9-434a-90ed-63d2e606a4e9}</Project>
+      <Name>GuFun.WinCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.jpg" />
+    <Content Include="Resources\background\login.jpg" />
+    <Content Include="Resources\ribbon\1.gif" />
+    <Content Include="Resources\ribbon\10.gif" />
+    <Content Include="Resources\ribbon\11.gif" />
+    <Content Include="Resources\ribbon\12.gif" />
+    <Content Include="Resources\ribbon\13.gif" />
+    <Content Include="Resources\ribbon\14.gif" />
+    <Content Include="Resources\ribbon\15.gif" />
+    <Content Include="Resources\ribbon\16.gif" />
+    <Content Include="Resources\ribbon\17.gif" />
+    <Content Include="Resources\ribbon\18.gif" />
+    <Content Include="Resources\ribbon\2.gif" />
+    <Content Include="Resources\ribbon\3.gif" />
+    <Content Include="Resources\ribbon\4.gif" />
+    <Content Include="Resources\ribbon\5.gif" />
+    <Content Include="Resources\ribbon\6.gif" />
+    <Content Include="Resources\ribbon\7.gif" />
+    <Content Include="Resources\ribbon\8.gif" />
+    <Content Include="Resources\ribbon\9.gif" />
+    <Content Include="Resources\tools\add.gif" />
+    <Content Include="Resources\tools\cancel.gif" />
+    <Content Include="Resources\tools\copy.gif" />
+    <Content Include="Resources\tools\del.gif" />
+    <Content Include="Resources\tools\detail.gif" />
+    <Content Include="Resources\tools\edit.gif" />
+    <Content Include="Resources\tools\exit.gif" />
+    <Content Include="Resources\tools\export.gif" />
+    <Content Include="Resources\tools\first.gif" />
+    <Content Include="Resources\tools\last.gif" />
+    <Content Include="Resources\tools\next.gif" />
+    <Content Include="Resources\tools\prev.gif" />
+    <Content Include="Resources\tools\print.gif" />
+    <Content Include="Resources\tools\save.gif" />
+    <Content Include="Resources\tools\search.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

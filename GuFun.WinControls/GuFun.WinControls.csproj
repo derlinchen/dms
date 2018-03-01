@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{04CFB4AB-2B4F-4B97-A2A8-A081DDFFE2D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GuFun.WinControls</RootNamespace>
+    <AssemblyName>GuFun.WinControls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomRenderer\Office2007Renderer\Office2007ColorTable.cs" />
+    <Compile Include="CustomRenderer\Office2007Renderer\Office2007Helpers.cs" />
+    <Compile Include="CustomRenderer\Office2007Renderer\Office2007Renderer.cs" />
+    <Compile Include="ExComboBox\ExComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExComboBox\ExComboBox.Designer.cs">
+      <DependentUpon>ExComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExComboTree\ExComboTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExDataGridView\DataGridViewMultiColumnComboColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExDataGridView\DataGridViewTimePickerColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExDataGridView\ExDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExDataGridView\ExDataGridView.Designer.cs">
+      <DependentUpon>ExDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExDataGridView\ExDataGridViewTextBoxColumn.cs" />
+    <Compile Include="ExDataGridView\ExDataView.cs" />
+    <Compile Include="ExDateTimePicker\ExDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExPanel\ExPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExPanel\ExPanel.Designer.cs">
+      <DependentUpon>ExPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExTabControl\ExTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExTabControl\ExTabControl.Designer.cs">
+      <DependentUpon>ExTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExTabPage\ExTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExTabPage\ExTabPage.Designer.cs">
+      <DependentUpon>ExTabPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExTextBox\ExTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExTextBox\ExTextBox.Designer.cs">
+      <DependentUpon>ExTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExTextBox\IpTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintGrid\PrintGrid.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ribbon\IContainsRibbonComponents.cs" />
+    <Compile Include="Ribbon\IContainsSelectableRibbonItems.cs" />
+    <Compile Include="Ribbon\IDropDownRibbonItem.cs" />
+    <Compile Include="Ribbon\IRibbonElement.cs" />
+    <Compile Include="Ribbon\IScrollableRibbonItem.cs">
+    </Compile>
+    <Compile Include="Ribbon\Ribbon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonArrowDirection.cs" />
+    <Compile Include="Ribbon\RibbonButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonButtonCollection.cs" />
+    <Compile Include="Ribbon\RibbonButtonDesigner.cs" />
+    <Compile Include="Ribbon\RibbonButtonList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonButtonListDesigner.cs" />
+    <Compile Include="Ribbon\RibbonButtonStyle.cs" />
+    <Compile Include="Ribbon\RibbonCanvasEventArgs.cs" />
+    <Compile Include="Ribbon\RibbonColorChooser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonComboBoxDesigner.cs" />
+    <Compile Include="Ribbon\RibbonContext.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonContextCollection.cs" />
+    <Compile Include="Ribbon\RibbonDesigner.cs" />
+    <Compile Include="Ribbon\RibbonDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonElementMeasureSizeEventArgs.cs" />
+    <Compile Include="Ribbon\RibbonElementPaintEventArgs.cs" />
+    <Compile Include="Ribbon\RibbonElementWithItemCollectionDesigner.cs" />
+    <Compile Include="Ribbon\RibbonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonItemBoundsEventArgs.cs" />
+    <Compile Include="Ribbon\RibbonItemCollection.cs" />
+    <Compile Include="Ribbon\RibbonItemCollectionEditor.cs" />
+    <Compile Include="Ribbon\RibbonItemGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonItemGroupDesigner.cs" />
+    <Compile Include="Ribbon\RibbonItemGroupItemCollection.cs" />
+    <Compile Include="Ribbon\RibbonItemRenderEventArgs.cs" />
+    <Compile Include="Ribbon\RibbonOrbAdornerGlyph.cs" />
+    <Compile Include="Ribbon\RibbonOrbDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonOrbDropDownEventArgs.cs">
+    </Compile>
+    <Compile Include="Ribbon\RibbonOrbMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonOrbOptionButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonOrbRecentItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonPanelCollection.cs" />
+    <Compile Include="Ribbon\RibbonPanelDesigner.cs" />
+    <Compile Include="Ribbon\RibbonPanelFlowDirection.cs" />
+    <Compile Include="Ribbon\RibbonPanelGlyph.cs" />
+    <Compile Include="Ribbon\RibbonPanelPopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonPanelRenderEventArgs.cs" />
+    <Compile Include="Ribbon\RibbonPanelSizeMode.cs" />
+    <Compile Include="Ribbon\RibbonPopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonProfesionalRendererColorTable.cs" />
+    <Compile Include="Ribbon\RibbonProfesionalRendererColorTableBlack.cs" />
+    <Compile Include="Ribbon\RibbonProfessionalRenderer.cs" />
+    <Compile Include="Ribbon\RibbonQuickAccessToolbar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonQuickAccessToolbarGlyph.cs" />
+    <Compile Include="Ribbon\RibbonQuickAccessToolbarItemCollection.cs" />
+    <Compile Include="Ribbon\RibbonRenderer.cs" />
+    <Compile Include="Ribbon\RibbonRenderEventArgs.cs" />
+    <Compile Include="Ribbon\RibbonSensor.cs" />
+    <Compile Include="Ribbon\RibbonSeparator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonTab.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonTabCollection.cs" />
+    <Compile Include="Ribbon\RibbonTabDesigner.cs" />
+    <Compile Include="Ribbon\RibbonTabGlyph.cs" />
+    <Compile Include="Ribbon\RibbonTabRenderEventArgs.cs" />
+    <Compile Include="Ribbon\RibbonTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon\RibbonToolTip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ShortcutButton\ShortcutButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ShortcutButton\ShortcutButton.Designer.cs">
+      <DependentUpon>ShortcutButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeViewBound\TreeNodeBound.cs" />
+    <Compile Include="TreeViewBound\TreeNodeBounds.cs" />
+    <Compile Include="TreeViewBound\TreeViewBound.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViewBound\TreeViewBound.Designer.cs">
+      <DependentUpon>TreeViewBound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaButton\VistaButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VistaButton\VistaButton.Designer.cs">
+      <DependentUpon>VistaButton.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ShortcutButton\Resources\SB_Back.png" />
+    <EmbeddedResource Include="ShortcutButton\Resources\SB_Click.png" />
+    <EmbeddedResource Include="ShortcutButton\Resources\SB_Disable.png" />
+    <EmbeddedResource Include="ShortcutButton\Resources\SB_Normal.png" />
+    <EmbeddedResource Include="ShortcutButton\Resources\SB_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GuFun.Utils\GuFun.Utils.csproj">
+      <Project>{0DD64F9E-A3BE-46C3-A7C0-60045A06BF07}</Project>
+      <Name>GuFun.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disable.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\GuFun.WinControls.dll" />
+    <Content Include="bin\Debug\GuFun.WinControls.pdb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

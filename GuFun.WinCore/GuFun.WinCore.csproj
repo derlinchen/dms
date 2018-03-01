@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6357278A-01F9-434A-90ED-63D2E606A4E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GuFun.WinCore</RootNamespace>
+    <AssemblyName>GuFun.WinCore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pdm\PdmKeyColumn.cs" />
+    <Compile Include="Project\BusHours\PageBusHours.cs" />
+    <Compile Include="Project\BusHours\BusHours.cs" />
+    <Compile Include="Project\BusHours\SqlProvider.cs" />
+    <Compile Include="Project\BusProject\BusProject.cs" />
+    <Compile Include="Enumerations\AuthBound.cs" />
+    <Compile Include="Enumerations\ColType.cs" />
+    <Compile Include="Enumerations\ExcelNowStatus.cs" />
+    <Compile Include="Enumerations\LoginStatus.cs" />
+    <Compile Include="Enumerations\ManType.cs" />
+    <Compile Include="Enumerations\NowStatus.cs" />
+    <Compile Include="Pdm\ColumnInfo.cs" />
+    <Compile Include="Pdm\ColumnTable.cs" />
+    <Compile Include="Pdm\KeyInfo.cs" />
+    <Compile Include="Pdm\PdmColumn.cs" />
+    <Compile Include="Pdm\PdmDatabase.cs" />
+    <Compile Include="Pdm\PdmHelper.cs" />
+    <Compile Include="Pdm\PdmIndex.cs" />
+    <Compile Include="Pdm\PdmKey.cs" />
+    <Compile Include="Pdm\PdmTable.cs" />
+    <Compile Include="Pdm\SqlProvider.cs" />
+    <Compile Include="Pdm\TableInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\SqlBaseProvider.cs" />
+    <Compile Include="Publics\CacheParameter.cs" />
+    <Compile Include="Publics\CacheParameters.cs" />
+    <Compile Include="Publics\CoreCtrls.cs" />
+    <Compile Include="Publics\InitSimpleParas.cs" />
+    <Compile Include="Publics\MenuAuth.cs" />
+    <Compile Include="Publics\MenuAuths.cs" />
+    <Compile Include="Publics\PublicTools.cs" />
+    <Compile Include="Publics\UserCache.cs" />
+    <Compile Include="Project\BusProject\SqlProvider.cs" />
+    <Compile Include="System\RibButton\RibButton.cs" />
+    <Compile Include="System\RibButton\RibButtons.cs" />
+    <Compile Include="System\RibButton\SqlProvider.cs" />
+    <Compile Include="System\RibPanel\RibPanel.cs" />
+    <Compile Include="System\RibPanel\RibPanels.cs" />
+    <Compile Include="System\RibPanel\SqlProvider.cs" />
+    <Compile Include="System\RibTab\RibTab.cs" />
+    <Compile Include="System\RibTab\RibTabs.cs" />
+    <Compile Include="System\RibTab\SqlProvider.cs" />
+    <Compile Include="System\SetSqlDetail\SetSqlDetail.cs" />
+    <Compile Include="System\SetSqlDetail\SetSqlDetails.cs" />
+    <Compile Include="System\SetSqlDetail\SqlProvider.cs" />
+    <Compile Include="System\SetSql\SetSql.cs" />
+    <Compile Include="System\SetSql\SqlProvider.cs" />
+    <Compile Include="System\SysCompany\SqlProvider.cs" />
+    <Compile Include="System\SysCompany\SysCompany.cs" />
+    <Compile Include="System\SysDept\SqlProvider.cs" />
+    <Compile Include="System\SysDept\SysDept.cs" />
+    <Compile Include="System\SysLog\SqlProvider.cs" />
+    <Compile Include="System\SysLog\SysLog.cs" />
+    <Compile Include="System\SysMan\SqlProvider.cs" />
+    <Compile Include="System\SysMan\SysMan.cs" />
+    <Compile Include="System\SysMenuDetail\SqlProvider.cs" />
+    <Compile Include="System\SysMenuDetail\SysMenuDetail.cs" />
+    <Compile Include="System\SysMenuDetail\SysMenuDetails.cs" />
+    <Compile Include="System\SysMenuGroup\SqlProvider.cs" />
+    <Compile Include="System\SysMenuGroup\SysMenuGroup.cs" />
+    <Compile Include="System\SysMenuGroup\SysMenuGroups.cs" />
+    <Compile Include="System\SysMenu\SqlProvider.cs" />
+    <Compile Include="System\SysMenu\SysMenu.cs" />
+    <Compile Include="System\SysMenu\SysMenus.cs" />
+    <Compile Include="System\SysOnline\SqlProvider.cs" />
+    <Compile Include="System\SysOnline\SysOnline.cs" />
+    <Compile Include="System\SysRegister\SqlProvider.cs" />
+    <Compile Include="System\SysRegister\SysRegister.cs" />
+    <Compile Include="System\SysRole\SqlProvider.cs" />
+    <Compile Include="System\SysRole\SysRole.cs" />
+    <Compile Include="System\SysRole\SysRoleMenu.cs" />
+    <Compile Include="System\SysRole\SysRoleMenus.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GuFun.Utils\GuFun.Utils.csproj">
+      <Project>{0dd64f9e-a3be-46c3-a7c0-60045a06bf07}</Project>
+      <Name>GuFun.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
