@@ -3,3 +3,4 @@ E:\Source\C#\DMS\GuFun.Utils\bin\Debug\GuFun.Utils.pdb
 E:\Source\C#\DMS\GuFun.Utils\obj\Debug\GuFun.Utils.csproj.ResolveComReference.cache
 E:\Source\C#\DMS\GuFun.Utils\obj\Debug\GuFun.Utils.dll
 E:\Source\C#\DMS\GuFun.Utils\obj\Debug\GuFun.Utils.pdb
+E:\Source\C#\DMS\GuFun.Utils\obj\Debug\GuFun.Utils.csprojResolveAssemblyReference.cache

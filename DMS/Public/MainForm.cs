@@ -392,7 +392,7 @@ namespace DMS
                 if (this.Controls[i].GetType().ToString() == "System.Windows.Forms.MdiClient")
                 {
                     ((System.Windows.Forms.MdiClient)this.Controls[i]).BackColor = StringHelper.GetColor("#99CCC3");
-                    this.BackgroundImage = DMS.Properties.Resources.back;
+                    //this.BackgroundImage = DMS.Properties.Resources.back;
                     break;
                 }
             }
