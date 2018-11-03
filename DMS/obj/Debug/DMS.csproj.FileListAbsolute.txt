@@ -1,12 +1,6 @@
 E:\Source\C#\DMS\DMS\bin\Debug\DMS.exe.config
 E:\Source\C#\DMS\DMS\bin\Debug\DMS.exe
 E:\Source\C#\DMS\DMS\bin\Debug\DMS.pdb
-E:\Source\C#\DMS\DMS\bin\Debug\GuFun.Utils.dll
-E:\Source\C#\DMS\DMS\bin\Debug\GuFun.WinControls.dll
-E:\Source\C#\DMS\DMS\bin\Debug\GuFun.WinCore.dll
-E:\Source\C#\DMS\DMS\bin\Debug\GuFun.Utils.pdb
-E:\Source\C#\DMS\DMS\bin\Debug\GuFun.WinControls.pdb
-E:\Source\C#\DMS\DMS\bin\Debug\GuFun.WinCore.pdb
 E:\Source\C#\DMS\DMS\obj\Debug\DMS.csprojResolveAssemblyReference.cache
 E:\Source\C#\DMS\DMS\obj\Debug\DMS.BaseParamForm.resources
 E:\Source\C#\DMS\DMS\obj\Debug\DMS.MySql.GpersistCode.resources
@@ -20,7 +14,6 @@ E:\Source\C#\DMS\DMS\obj\Debug\DMS.ManProject.resources
 E:\Source\C#\DMS\DMS\obj\Debug\DMS.SetDeveloper.resources
 E:\Source\C#\DMS\DMS\obj\Debug\DMS.EditHours.resources
 E:\Source\C#\DMS\DMS\obj\Debug\DMS.Register.resources
-E:\Source\C#\DMS\DMS\obj\Debug\DMS.SqlServer.GpersistCode.resources
 E:\Source\C#\DMS\DMS\obj\Debug\DMS.ConnectEncryptForm.resources
 E:\Source\C#\DMS\DMS\obj\Debug\DMS.DeleteRegister.resources
 E:\Source\C#\DMS\DMS\obj\Debug\DMS.EditRole.resources
@@ -49,3 +42,10 @@ E:\Source\C#\DMS\DMS\obj\Debug\DMS.UnLockMan.resources
 E:\Source\C#\DMS\DMS\obj\Debug\DMS.csproj.GenerateResource.Cache
 E:\Source\C#\DMS\DMS\obj\Debug\DMS.exe
 E:\Source\C#\DMS\DMS\obj\Debug\DMS.pdb
+E:\Source\C#\DMS\DMS\bin\Debug\Utils.dll
+E:\Source\C#\DMS\DMS\bin\Debug\WinControls.dll
+E:\Source\C#\DMS\DMS\bin\Debug\WinCore.dll
+E:\Source\C#\DMS\DMS\bin\Debug\Utils.pdb
+E:\Source\C#\DMS\DMS\bin\Debug\WinControls.pdb
+E:\Source\C#\DMS\DMS\bin\Debug\WinCore.pdb
+E:\Source\C#\DMS\DMS\obj\Debug\DMS.SqlServer.GpersistCode.resources

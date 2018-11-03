@@ -38,7 +38,6 @@ E:\Source\C#\DMS\DMS\obj\Release\DMS.exe
 E:\Source\C#\DMS\DMS\obj\Release\DMS.pdb
 E:\Source\C#\DMS\DMS\obj\Release\DMS.MySql.GpersistCode.resources
 E:\Source\C#\DMS\DMS\obj\Release\DMS.Oracle.GpersistCode.resources
-E:\Source\C#\DMS\DMS\obj\Release\DMS.SqlServer.GpersistCode.resources
 E:\Source\C#\DMS\DMS\obj\Release\DMS.ConnectEncryptForm.resources
 E:\Source\C#\DMS\DMS\obj\Release\DMS.ManHours.resources
 E:\Source\C#\DMS\DMS\obj\Release\DMS.ManProject.resources
@@ -49,3 +48,4 @@ E:\Source\C#\DMS\DMS\bin\Release\WinCore.dll
 E:\Source\C#\DMS\DMS\bin\Release\Utils.pdb
 E:\Source\C#\DMS\DMS\bin\Release\WinControls.pdb
 E:\Source\C#\DMS\DMS\bin\Release\WinCore.pdb
+E:\Source\C#\DMS\DMS\obj\Release\DMS.SqlServer.GpersistCode.resources
