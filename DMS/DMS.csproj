@@ -463,7 +463,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\back.jpg" />
     <Content Include="Resources\background\login.jpg" />
     <Content Include="Resources\ribbon\1.gif" />
     <Content Include="Resources\ribbon\10.gif" />
