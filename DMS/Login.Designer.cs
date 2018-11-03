@@ -29,25 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.pLogin = new System.Windows.Forms.PictureBox();
             this.txtManID = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.chbRemember = new System.Windows.Forms.CheckBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.pLogin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pLogin)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pLogin
-            // 
-            this.pLogin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pLogin.Image = ((System.Drawing.Image)(resources.GetObject("pLogin.Image")));
-            this.pLogin.Location = new System.Drawing.Point(0, 0);
-            this.pLogin.Name = "pLogin";
-            this.pLogin.Size = new System.Drawing.Size(800, 600);
-            this.pLogin.TabIndex = 0;
-            this.pLogin.TabStop = false;
             // 
             // txtManID
             // 
@@ -108,6 +98,16 @@
             this.btnCancel.Text = "退出";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // pLogin
+            // 
+            this.pLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pLogin.Image = ((System.Drawing.Image)(resources.GetObject("pLogin.Image")));
+            this.pLogin.Location = new System.Drawing.Point(0, 0);
+            this.pLogin.Name = "pLogin";
+            this.pLogin.Size = new System.Drawing.Size(800, 600);
+            this.pLogin.TabIndex = 0;
+            this.pLogin.TabStop = false;
             // 
             // Login
             // 
