@@ -1,12 +1,6 @@
 E:\Source\C#\DMS\DMS\bin\Release\DMS.exe.config
 E:\Source\C#\DMS\DMS\bin\Release\DMS.exe
 E:\Source\C#\DMS\DMS\bin\Release\DMS.pdb
-E:\Source\C#\DMS\DMS\bin\Release\GuFun.Utils.dll
-E:\Source\C#\DMS\DMS\bin\Release\GuFun.WinControls.dll
-E:\Source\C#\DMS\DMS\bin\Release\GuFun.WinCore.dll
-E:\Source\C#\DMS\DMS\bin\Release\GuFun.Utils.pdb
-E:\Source\C#\DMS\DMS\bin\Release\GuFun.WinControls.pdb
-E:\Source\C#\DMS\DMS\bin\Release\GuFun.WinCore.pdb
 E:\Source\C#\DMS\DMS\obj\Release\DMS.csprojResolveAssemblyReference.cache
 E:\Source\C#\DMS\DMS\obj\Release\DMS.BaseParamForm.resources
 E:\Source\C#\DMS\DMS\obj\Release\DMS.MySql.ImportPdm.resources
@@ -49,3 +43,9 @@ E:\Source\C#\DMS\DMS\obj\Release\DMS.ConnectEncryptForm.resources
 E:\Source\C#\DMS\DMS\obj\Release\DMS.ManHours.resources
 E:\Source\C#\DMS\DMS\obj\Release\DMS.ManProject.resources
 E:\Source\C#\DMS\DMS\obj\Release\DMS.EditHours.resources
+E:\Source\C#\DMS\DMS\bin\Release\Utils.dll
+E:\Source\C#\DMS\DMS\bin\Release\WinControls.dll
+E:\Source\C#\DMS\DMS\bin\Release\WinCore.dll
+E:\Source\C#\DMS\DMS\bin\Release\Utils.pdb
+E:\Source\C#\DMS\DMS\bin\Release\WinControls.pdb
+E:\Source\C#\DMS\DMS\bin\Release\WinCore.pdb

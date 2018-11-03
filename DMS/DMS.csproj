@@ -11,6 +11,21 @@
     <AssemblyName>DMS</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,6 +52,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -433,17 +449,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GuFun.Utils\GuFun.Utils.csproj">
+    <ProjectReference Include="..\Utils\Utils.csproj">
       <Project>{0dd64f9e-a3be-46c3-a7c0-60045a06bf07}</Project>
-      <Name>GuFun.Utils</Name>
+      <Name>Utils</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GuFun.WinControls\GuFun.WinControls.csproj">
+    <ProjectReference Include="..\WinControls\WinControls.csproj">
       <Project>{04CFB4AB-2B4F-4B97-A2A8-A081DDFFE2D2}</Project>
-      <Name>GuFun.WinControls</Name>
+      <Name>WinControls</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GuFun.WinCore\GuFun.WinCore.csproj">
+    <ProjectReference Include="..\WinCore\WinCore.csproj">
       <Project>{6357278a-01f9-434a-90ed-63d2e606a4e9}</Project>
-      <Name>GuFun.WinCore</Name>
+      <Name>WinCore</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -483,7 +499,23 @@
     <Content Include="Resources\tools\save.gif" />
     <Content Include="Resources\tools\search.gif" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

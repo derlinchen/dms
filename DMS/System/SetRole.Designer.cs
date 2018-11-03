@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblDept = new System.Windows.Forms.Label();
-            this.ectDept = new GuFun.WinControls.ExComboTree();
+            this.ectDept = new WinControls.ExComboTree();
             this.lblManName = new System.Windows.Forms.Label();
             this.txtManName = new System.Windows.Forms.TextBox();
             this.plSearch.SuspendLayout();
@@ -97,7 +97,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblDept;
-        private GuFun.WinControls.ExComboTree ectDept;
+        private WinControls.ExComboTree ectDept;
         private System.Windows.Forms.TextBox txtManName;
         private System.Windows.Forms.Label lblManName;
     }

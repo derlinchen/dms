@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.ilTools = new System.Windows.Forms.ImageList(this.components);
             this.msMain = new System.Windows.Forms.MenuStrip();
-            this.ribMain = new GuFun.WinControls.Ribbon();
+            this.ribMain = new WinControls.Ribbon();
             this.ssMain = new System.Windows.Forms.StatusStrip();
             this.sslTips = new System.Windows.Forms.ToolStripStatusLabel();
             this.sslMan = new System.Windows.Forms.ToolStripStatusLabel();
@@ -209,7 +209,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip msMain;
-        private GuFun.WinControls.Ribbon ribMain;
+        private WinControls.Ribbon ribMain;
         private System.Windows.Forms.StatusStrip ssMain;
         private System.Windows.Forms.ToolStripStatusLabel sslTips;
         private System.Windows.Forms.ToolStripStatusLabel sslMan;

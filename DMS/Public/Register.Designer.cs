@@ -32,7 +32,7 @@
             this.ctbInfo = new System.Windows.Forms.RichTextBox();
             this.lblRegNumber = new System.Windows.Forms.Label();
             this.lblDept = new System.Windows.Forms.Label();
-            this.ectDept = new GuFun.WinControls.ExComboTree();
+            this.ectDept = new WinControls.ExComboTree();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -142,7 +142,7 @@
         private System.Windows.Forms.RichTextBox ctbInfo;
         private System.Windows.Forms.Label lblRegNumber;
         private System.Windows.Forms.Label lblDept;
-        private GuFun.WinControls.ExComboTree ectDept;
+        private WinControls.ExComboTree ectDept;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnClose;
     }

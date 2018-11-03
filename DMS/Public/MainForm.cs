@@ -1,6 +1,6 @@
-﻿using GuFun.Utils;
-using GuFun.WinControls;
-using GuFun.WinCore;
+﻿using Utils;
+using WinControls;
+using WinCore;
 using System;
 using System.Windows.Forms;
 
@@ -265,6 +265,10 @@ namespace DMS
                     }
                     else
                     {
+                        if (nowForm != null && nowForm != fm)
+                        {
+                            nowForm.Close();
+                        }
                         fm.ShowDialog();
                     }
                 }
@@ -307,6 +311,10 @@ namespace DMS
                     }
                     else
                     {
+                        if (nowForm != null && nowForm != fm)
+                        {
+                            nowForm.Close();
+                        }
                         fm.ShowDialog();
                     }
                 }

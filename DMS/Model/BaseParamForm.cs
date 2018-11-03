@@ -1,6 +1,6 @@
-﻿using GuFun.Utils;
-using GuFun.WinControls;
-using GuFun.WinCore;
+﻿using Utils;
+using WinControls;
+using WinCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

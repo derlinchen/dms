@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditRole));
-            this.exPanel1 = new GuFun.WinControls.ExPanel();
+            this.exPanel1 = new WinControls.ExPanel();
             this.txtRoleDesc = new System.Windows.Forms.TextBox();
             this.lblRoleDesc = new System.Windows.Forms.Label();
             this.ddlData = new System.Windows.Forms.ComboBox();
@@ -253,7 +253,7 @@
 
         #endregion
 
-        private GuFun.WinControls.ExPanel exPanel1;
+        private WinControls.ExPanel exPanel1;
         private System.Windows.Forms.ComboBox ddlData;
         private System.Windows.Forms.Label lbdata;
         private System.Windows.Forms.TextBox txtRoleName;

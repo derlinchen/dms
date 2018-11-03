@@ -1,5 +1,5 @@
-﻿using GuFun.Utils;
-using GuFun.WinCore;
+﻿using Utils;
+using WinCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +16,7 @@ namespace DMS
         {
             InitializeComponent();
 
-            ectDept.Tree.ComboTreeType = GuFun.WinControls.ComboTreeType.None;
+            ectDept.Tree.ComboTreeType = WinControls.ComboTreeType.None;
             ectDept.Tree.TypeText = "";
             ectDept.Tree.DataSource = SqlBaseProvider.GetSimpleValidDept();
             ectDept.Tree.DisplayMember = "Dept_Name";

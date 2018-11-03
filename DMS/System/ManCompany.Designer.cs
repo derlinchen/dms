@@ -52,7 +52,7 @@
             this.txtCoOrder = new System.Windows.Forms.TextBox();
             this.printDoc = new System.Drawing.Printing.PrintDocument();
             this.printView = new System.Windows.Forms.PrintPreviewDialog();
-            this.txtCoMan = new GuFun.WinControls.ExTextBox(this.components);
+            this.txtCoMan = new WinControls.ExTextBox(this.components);
             this.etcMain.SuspendLayout();
             this.tpList.SuspendLayout();
             this.tpEdit.SuspendLayout();
@@ -345,6 +345,6 @@
         private System.Windows.Forms.TextBox txtCoEMail;
         private System.Drawing.Printing.PrintDocument printDoc;
         private System.Windows.Forms.PrintPreviewDialog printView;
-        private GuFun.WinControls.ExTextBox txtCoMan;
+        private WinControls.ExTextBox txtCoMan;
     }
 }

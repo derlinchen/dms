@@ -1,4 +1,4 @@
-﻿using GuFun.WinCore;
+﻿using WinCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

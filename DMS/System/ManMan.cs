@@ -1,5 +1,5 @@
-﻿using GuFun.WinControls;
-using GuFun.WinCore;
+﻿using WinControls;
+using WinCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +26,7 @@ namespace DMS
             this.mCode = "0603";
 
             CoreCtrls.SetDataGridView(dgvList, "P_Get_SysMan", Program.ManInfo);
-            ectDept.Tree.ComboTreeType = GuFun.WinControls.ComboTreeType.All;
+            ectDept.Tree.ComboTreeType = WinControls.ComboTreeType.All;
             ectDept.Tree.TypeText = "所有部门";
             ectDept.Tree.DataSource = SqlBaseProvider.GetSimpleValidDept();
             ectDept.Tree.DisplayMember = "Dept_Name";

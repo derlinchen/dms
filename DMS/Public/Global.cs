@@ -1,5 +1,5 @@
-﻿using GuFun.Utils;
-using GuFun.WinControls;
+﻿using Utils;
+using WinControls;
 using System;
 using System.Data.SqlClient;
 using System.Drawing;

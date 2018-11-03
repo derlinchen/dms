@@ -1,7 +1,7 @@
-﻿using GuFun.Utils;
-using GuFun.Utils.Enumerations;
-using GuFun.WinCore;
-using GuFun.WinCore.Pdm;
+﻿using Utils;
+using Utils.Enumerations;
+using WinCore;
+using WinCore.Pdm;
 using System;
 using System.Collections;
 using System.Collections.Generic;

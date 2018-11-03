@@ -1,0 +1,7 @@
+E:\Source\C#\DMS\WinCore\bin\Release\WinCore.dll
+E:\Source\C#\DMS\WinCore\bin\Release\WinCore.pdb
+E:\Source\C#\DMS\WinCore\bin\Release\Utils.dll
+E:\Source\C#\DMS\WinCore\bin\Release\Utils.pdb
+E:\Source\C#\DMS\WinCore\obj\Release\WinCore.csprojResolveAssemblyReference.cache
+E:\Source\C#\DMS\WinCore\obj\Release\WinCore.dll
+E:\Source\C#\DMS\WinCore\obj\Release\WinCore.pdb

@@ -39,7 +39,7 @@
             this.tssPrint = new System.Windows.Forms.ToolStripSeparator();
             this.tsbPreview = new System.Windows.Forms.ToolStripButton();
             this.tsbPrint = new System.Windows.Forms.ToolStripButton();
-            this.plEdit = new GuFun.WinControls.ExPanel();
+            this.plEdit = new WinControls.ExPanel();
             this.tsMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -191,6 +191,6 @@
         protected System.Windows.Forms.ToolStripButton tsbPreview;
         protected System.Windows.Forms.ToolStripButton tsbPrint;
         protected System.Windows.Forms.ToolStrip tsMain;
-        protected GuFun.WinControls.ExPanel plEdit;
+        protected WinControls.ExPanel plEdit;
     }
 }

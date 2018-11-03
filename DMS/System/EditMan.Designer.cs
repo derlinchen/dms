@@ -44,7 +44,7 @@
             this.ddlManLevel = new System.Windows.Forms.ComboBox();
             this.ddlManType = new System.Windows.Forms.ComboBox();
             this.ddlManStatus = new System.Windows.Forms.ComboBox();
-            this.ectDept = new GuFun.WinControls.ExComboTree();
+            this.ectDept = new WinControls.ExComboTree();
             this.plEdit.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -252,7 +252,7 @@
         private System.Windows.Forms.Label lbdept;
         private System.Windows.Forms.Label lbManTitle;
         private System.Windows.Forms.Label lbManName;
-        private GuFun.WinControls.ExComboTree ectDept;
+        private WinControls.ExComboTree ectDept;
         private System.Windows.Forms.ComboBox ddlManStatus;
         private System.Windows.Forms.ComboBox ddlManType;
         private System.Windows.Forms.ComboBox ddlManLevel;

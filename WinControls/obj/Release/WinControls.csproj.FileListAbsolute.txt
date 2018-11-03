@@ -1,0 +1,7 @@
+E:\Source\C#\DMS\WinControls\bin\Release\WinControls.dll
+E:\Source\C#\DMS\WinControls\bin\Release\WinControls.pdb
+E:\Source\C#\DMS\WinControls\bin\Release\Utils.dll
+E:\Source\C#\DMS\WinControls\bin\Release\Utils.pdb
+E:\Source\C#\DMS\WinControls\obj\Release\WinControls.csprojResolveAssemblyReference.cache
+E:\Source\C#\DMS\WinControls\obj\Release\WinControls.dll
+E:\Source\C#\DMS\WinControls\obj\Release\WinControls.pdb

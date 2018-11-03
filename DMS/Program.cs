@@ -1,5 +1,5 @@
-﻿using GuFun.Utils;
-using GuFun.WinCore;
+﻿using Utils;
+using WinCore;
 using System;
 using System.Collections.Generic;
 using System.Data;

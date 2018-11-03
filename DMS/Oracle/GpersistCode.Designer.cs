@@ -39,27 +39,27 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plTop = new GuFun.WinControls.ExPanel();
-            this.btnReset = new GuFun.WinControls.VistaButton();
-            this.btnAction = new GuFun.WinControls.VistaButton();
-            this.btnService = new GuFun.WinControls.VistaButton();
-            this.btnDao = new GuFun.WinControls.VistaButton();
-            this.btnMapper = new GuFun.WinControls.VistaButton();
-            this.btnXml = new GuFun.WinControls.VistaButton();
-            this.btnExit = new GuFun.WinControls.VistaButton();
-            this.btnWork = new GuFun.WinControls.VistaButton();
-            this.btnBean = new GuFun.WinControls.VistaButton();
-            this.btnJs = new GuFun.WinControls.VistaButton();
-            this.btnSaveSql = new GuFun.WinControls.VistaButton();
-            this.btnGetSql = new GuFun.WinControls.VistaButton();
+            this.plTop = new WinControls.ExPanel();
+            this.btnReset = new WinControls.VistaButton();
+            this.btnAction = new WinControls.VistaButton();
+            this.btnService = new WinControls.VistaButton();
+            this.btnDao = new WinControls.VistaButton();
+            this.btnMapper = new WinControls.VistaButton();
+            this.btnXml = new WinControls.VistaButton();
+            this.btnExit = new WinControls.VistaButton();
+            this.btnWork = new WinControls.VistaButton();
+            this.btnBean = new WinControls.VistaButton();
+            this.btnJs = new WinControls.VistaButton();
+            this.btnSaveSql = new WinControls.VistaButton();
+            this.btnGetSql = new WinControls.VistaButton();
             this.cbNo = new System.Windows.Forms.CheckBox();
             this.cbDelete = new System.Windows.Forms.CheckBox();
             this.cbInsert = new System.Windows.Forms.CheckBox();
             this.cbEdit = new System.Windows.Forms.CheckBox();
             this.cbPage = new System.Windows.Forms.CheckBox();
             this.cbSearch = new System.Windows.Forms.CheckBox();
-            this.btnSave = new GuFun.WinControls.VistaButton();
-            this.btnSet = new GuFun.WinControls.VistaButton();
+            this.btnSave = new WinControls.VistaButton();
+            this.btnSet = new WinControls.VistaButton();
             this.txtValue = new System.Windows.Forms.TextBox();
             this.lbValue = new System.Windows.Forms.Label();
             this.txtClassName = new System.Windows.Forms.TextBox();
@@ -619,7 +619,7 @@
 
         #endregion
 
-        private GuFun.WinControls.ExPanel plTop;
+        private WinControls.ExPanel plTop;
         private System.Windows.Forms.Panel plCenter;
         private System.Windows.Forms.RichTextBox txtSet;
         private System.Windows.Forms.RichTextBox txtResult;
@@ -637,25 +637,25 @@
         private System.Windows.Forms.TextBox txtClassName;
         private System.Windows.Forms.Label lbValue;
         private System.Windows.Forms.TextBox txtValue;
-        private GuFun.WinControls.VistaButton btnSet;
-        private GuFun.WinControls.VistaButton btnSave;
+        private WinControls.VistaButton btnSet;
+        private WinControls.VistaButton btnSave;
         private System.Windows.Forms.CheckBox cbSearch;
         private System.Windows.Forms.CheckBox cbPage;
         private System.Windows.Forms.CheckBox cbEdit;
         private System.Windows.Forms.CheckBox cbInsert;
         private System.Windows.Forms.CheckBox cbDelete;
         private System.Windows.Forms.CheckBox cbNo;
-        private GuFun.WinControls.VistaButton btnAction;
-        private GuFun.WinControls.VistaButton btnService;
-        private GuFun.WinControls.VistaButton btnDao;
-        private GuFun.WinControls.VistaButton btnMapper;
-        private GuFun.WinControls.VistaButton btnXml;
-        private GuFun.WinControls.VistaButton btnExit;
-        private GuFun.WinControls.VistaButton btnWork;
-        private GuFun.WinControls.VistaButton btnBean;
-        private GuFun.WinControls.VistaButton btnJs;
-        private GuFun.WinControls.VistaButton btnSaveSql;
-        private GuFun.WinControls.VistaButton btnGetSql;
+        private WinControls.VistaButton btnAction;
+        private WinControls.VistaButton btnService;
+        private WinControls.VistaButton btnDao;
+        private WinControls.VistaButton btnMapper;
+        private WinControls.VistaButton btnXml;
+        private WinControls.VistaButton btnExit;
+        private WinControls.VistaButton btnWork;
+        private WinControls.VistaButton btnBean;
+        private WinControls.VistaButton btnJs;
+        private WinControls.VistaButton btnSaveSql;
+        private WinControls.VistaButton btnGetSql;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -663,6 +663,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private GuFun.WinControls.VistaButton btnReset;
+        private WinControls.VistaButton btnReset;
     }
 }

@@ -1,5 +1,5 @@
-﻿using GuFun.Utils;
-using GuFun.WinCore;
+﻿using Utils;
+using WinCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +21,7 @@ namespace DMS
         public BaseListForm()
         {
             InitializeComponent();
-            tsMain.Renderer = new GuFun.WinControls.Office2007Renderer();
+            tsMain.Renderer = new WinControls.Office2007Renderer();
             tsMain.ImageList = this.ilTools;
             tsbExit.ImageIndex = 0;
             tsbFirst.ImageIndex = 1;

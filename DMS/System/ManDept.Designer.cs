@@ -42,8 +42,8 @@
             this.tsbSave = new System.Windows.Forms.ToolStripButton();
             this.tsbCancel = new System.Windows.Forms.ToolStripButton();
             this.scMain = new System.Windows.Forms.SplitContainer();
-            this.tvDept = new GuFun.WinControls.TreeViewBound();
-            this.plEdit = new GuFun.WinControls.ExPanel();
+            this.tvDept = new WinControls.TreeViewBound();
+            this.plEdit = new WinControls.ExPanel();
             this.txtDeptShort = new System.Windows.Forms.TextBox();
             this.ddlDeptStatus = new System.Windows.Forms.ComboBox();
             this.ddlDeptLevel = new System.Windows.Forms.ComboBox();
@@ -75,7 +75,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtDeptMan = new GuFun.WinControls.ExTextBox(this.components);
+            this.txtDeptMan = new WinControls.ExTextBox(this.components);
             this.tsMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scMain)).BeginInit();
             this.scMain.Panel1.SuspendLayout();
@@ -212,7 +212,7 @@
             // 
             // tvDept
             // 
-            this.tvDept.ComboTreeType = GuFun.WinControls.ComboTreeType.None;
+            this.tvDept.ComboTreeType = WinControls.ComboTreeType.None;
             this.tvDept.DisplayMember = null;
             this.tvDept.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvDept.Location = new System.Drawing.Point(0, 0);
@@ -581,8 +581,8 @@
         private System.Windows.Forms.ToolStripButton tsbSave;
         private System.Windows.Forms.ToolStripButton tsbCancel;
         private System.Windows.Forms.SplitContainer scMain;
-        private GuFun.WinControls.TreeViewBound tvDept;
-        private GuFun.WinControls.ExPanel plEdit;
+        private WinControls.TreeViewBound tvDept;
+        private WinControls.ExPanel plEdit;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -614,7 +614,7 @@
         private System.Windows.Forms.TextBox txtDeptName;
         private System.Windows.Forms.TextBox txtDeptID;
         private System.Windows.Forms.ImageList ilTools;
-        private GuFun.WinControls.ExTextBox txtDeptMan;
+        private WinControls.ExTextBox txtDeptMan;
 
     }
 }

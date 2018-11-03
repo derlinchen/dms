@@ -35,9 +35,9 @@
             this.filename = new System.Windows.Forms.TextBox();
             this.dbname = new System.Windows.Forms.TextBox();
             this.dbcode = new System.Windows.Forms.TextBox();
-            this.choosefile = new GuFun.WinControls.VistaButton();
-            this.savefile = new GuFun.WinControls.VistaButton();
-            this.closefrom = new GuFun.WinControls.VistaButton();
+            this.choosefile = new WinControls.VistaButton();
+            this.savefile = new WinControls.VistaButton();
+            this.closefrom = new WinControls.VistaButton();
             this.cbLog = new System.Windows.Forms.CheckBox();
             this.lbProject = new System.Windows.Forms.Label();
             this.ddlProject = new System.Windows.Forms.ComboBox();
@@ -212,9 +212,9 @@
         private System.Windows.Forms.TextBox filename;
         private System.Windows.Forms.TextBox dbname;
         private System.Windows.Forms.TextBox dbcode;
-        private GuFun.WinControls.VistaButton choosefile;
-        private GuFun.WinControls.VistaButton savefile;
-        private GuFun.WinControls.VistaButton closefrom;
+        private WinControls.VistaButton choosefile;
+        private WinControls.VistaButton savefile;
+        private WinControls.VistaButton closefrom;
         private System.Windows.Forms.CheckBox cbLog;
         private System.Windows.Forms.Label lbProject;
         private System.Windows.Forms.ComboBox ddlProject;

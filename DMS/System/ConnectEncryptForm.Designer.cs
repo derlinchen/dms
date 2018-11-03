@@ -39,9 +39,9 @@
             this.lbDBName = new System.Windows.Forms.Label();
             this.txtServer = new System.Windows.Forms.TextBox();
             this.lbServer = new System.Windows.Forms.Label();
-            this.btnExit = new GuFun.WinControls.VistaButton();
-            this.btnDecode = new GuFun.WinControls.VistaButton();
-            this.btnEncode = new GuFun.WinControls.VistaButton();
+            this.btnExit = new WinControls.VistaButton();
+            this.btnDecode = new WinControls.VistaButton();
+            this.btnEncode = new WinControls.VistaButton();
             this.SuspendLayout();
             // 
             // ilTools
@@ -220,8 +220,8 @@
         private System.Windows.Forms.TextBox txtDBPassword;
         private System.Windows.Forms.Label lbResult;
         private System.Windows.Forms.TextBox txtResult;
-        private GuFun.WinControls.VistaButton btnEncode;
-        private GuFun.WinControls.VistaButton btnDecode;
-        private GuFun.WinControls.VistaButton btnExit;
+        private WinControls.VistaButton btnEncode;
+        private WinControls.VistaButton btnDecode;
+        private WinControls.VistaButton btnExit;
     }
 }

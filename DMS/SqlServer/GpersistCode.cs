@@ -1,7 +1,7 @@
-﻿using GuFun.Utils;
-using GuFun.Utils.Enumerations;
-using GuFun.WinCore;
-using GuFun.WinCore.Pdm;
+﻿using Utils;
+using Utils.Enumerations;
+using WinCore;
+using WinCore.Pdm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -1136,50 +1136,51 @@ namespace DMS.SqlServer
                 }
 
                 string dataType = keyCol.DataType;
-                string defaultnum = "0000000001";
+                //string defaultnum = "0000000001";
+                string defaultnum = "000000000000000000000000000001";
+                txtResult.Text = "";
 
-                if (dataType.IndexOf("(") < 0)
+                if (dataType.IndexOf("(") > 0)
                 {
-                    Global.ShowSysInfo("主键生成必须有长度限定，请确认字段长度！");
-                    return;
+                    int length = Convert.ToInt32(dataType.Substring(dataType.IndexOf("(") + 1, dataType.Length - (dataType.IndexOf("(") + 1) - 1));
+
+                    txtResult.Text = PublicTools.WriteTab(0) + "if (exists (select name from sysobjects where (name = N'P_Create_" + keycolumn + "') and (type = 'P')))" + PublicTools.WriteEnter(1);
+                    txtResult.Text += PublicTools.WriteTab(1) + "drop procedure dbo.P_Create_" + keycolumn + PublicTools.WriteEnter(1);
+                    txtResult.Text += PublicTools.WriteTab(0) + "go" + PublicTools.WriteEnter(1);
+
+                    txtResult.Text += PublicTools.WriteTab(0) + "create procedure [dbo].P_Create_" + keycolumn + PublicTools.WriteEnter(1);
+                    txtResult.Text += PublicTools.WriteTab(0) + "(" + PublicTools.WriteEnter(1);
+                    txtResult.Text += PublicTools.WriteTab(1) + "@" + keycolumn.ToLower() + " " + dataType + " out" + PublicTools.WriteEnter(1);
+                    txtResult.Text += PublicTools.WriteTab(0) + ")" + PublicTools.WriteEnter(1);
+                    txtResult.Text += PublicTools.WriteTab(0) + "as" + PublicTools.WriteEnter(1);
+                    txtResult.Text += PublicTools.WriteTab(0) + "begin" + PublicTools.WriteEnter(1);
+
+                    if (length > 10)
+                    {
+                        txtResult.Text += PublicTools.WriteTab(1) + "declare @maxno int" + PublicTools.WriteEnter(1);
+                        txtResult.Text += PublicTools.WriteTab(1) + "select @maxno = max(right(" + keycolumn.ToLower() + "," + (length - 10) + ")) from " + pTable.TableCode + PublicTools.WriteEnter(1);
+                        txtResult.Text += PublicTools.WriteTab(2) + " where left(" + keycolumn.ToLower() + " ,10) = 'PK'+replace(convert(varchar(10),getdate(),120),'-','')" + PublicTools.WriteEnter(1);
+                        txtResult.Text += PublicTools.WriteTab(1) + "if @maxno is null" + PublicTools.WriteEnter(1);
+                        txtResult.Text += PublicTools.WriteTab(2) + "select @" + keycolumn.ToLower() + " = 'PK' + replace(convert(varchar(10),getdate(),120),'-','') +'" + defaultnum.Substring(defaultnum.Length - (length - 10), length - 10) + "'" + PublicTools.WriteEnter(1);
+                        txtResult.Text += PublicTools.WriteTab(1) + "else" + PublicTools.WriteEnter(1);
+                        txtResult.Text += PublicTools.WriteTab(2) + "select @" + keycolumn.ToLower() + " = 'PK'+ replace(convert(varchar(10),getdate(),120),'-','')" + PublicTools.WriteEnter(1);
+                        txtResult.Text += PublicTools.WriteTab(3) + "+replace(space(" + (length - 10) + "-len(@maxno+1)),space(1),'0')+ltrim(str(@maxno+1))" + PublicTools.WriteEnter(1);
+
+                    }
+                    else
+                    {
+                        txtResult.Text += PublicTools.WriteTab(1) + "declare @maxno int" + PublicTools.WriteEnter(1);
+                        txtResult.Text += PublicTools.WriteTab(1) + "select @maxno = max(" + keycolumn.ToLower() + ") from " + pTable.TableCode + PublicTools.WriteEnter(1);
+                        txtResult.Text += PublicTools.WriteTab(1) + "if @maxno is null" + PublicTools.WriteEnter(1);
+                        txtResult.Text += PublicTools.WriteTab(2) + "select @" + keycolumn.ToLower() + " = '" + defaultnum.Substring(defaultnum.Length - length, length) + "'" + PublicTools.WriteEnter(1);
+                        txtResult.Text += PublicTools.WriteTab(1) + "else" + PublicTools.WriteEnter(1);
+                        txtResult.Text += PublicTools.WriteTab(2) + "select @" + keycolumn.ToLower() + " = " + "replace(space(" + length + "-len(@maxno+1)),space(1),'0')+ltrim(str(@maxno+1))" + PublicTools.WriteEnter(1);
+                    }
+                    txtResult.Text += PublicTools.WriteTab(0) + "end" + PublicTools.WriteEnter(1);
+                    txtResult.Text += PublicTools.WriteTab(0) + "go" + PublicTools.WriteEnter(2);
                 }
 
-                int length = Convert.ToInt32(dataType.Substring(dataType.IndexOf("(") + 1, dataType.Length - (dataType.IndexOf("(") + 1) - 1));
-
-                txtResult.Text = PublicTools.WriteTab(0) + "if (exists (select name from sysobjects where (name = N'P_Create_" + keycolumn + "') and (type = 'P')))" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(1) + "drop procedure dbo.P_Create_" + keycolumn + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(0) + "go" + PublicTools.WriteEnter(1);
-
-                txtResult.Text += PublicTools.WriteTab(0) + "create procedure [dbo].P_Create_" + keycolumn + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(0) + "(" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(1) + "@" + keycolumn.ToLower() + " " + dataType + " out" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(0) + ")" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(0) + "as" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(0) + "begin" + PublicTools.WriteEnter(1);
-
-                if (length > 10)
-                {
-                    txtResult.Text += PublicTools.WriteTab(1) + "declare @maxno int" + PublicTools.WriteEnter(1);
-                    txtResult.Text += PublicTools.WriteTab(1) + "select @maxno = max(right(" + keycolumn.ToLower() + "," + (length - 10) + ")) from " + pTable.TableCode + PublicTools.WriteEnter(1);
-                    txtResult.Text += PublicTools.WriteTab(2) + " where left(" + keycolumn.ToLower() + " ,10) = 'PK'+replace(convert(varchar(10),getdate(),120),'-','')" + PublicTools.WriteEnter(1);
-                    txtResult.Text += PublicTools.WriteTab(1) + "if @maxno is null" + PublicTools.WriteEnter(1);
-                    txtResult.Text += PublicTools.WriteTab(2) + "select @" + keycolumn.ToLower() + " = 'PK' + replace(convert(varchar(10),getdate(),120),'-','') +'" + defaultnum.Substring(defaultnum.Length - (length - 10), length - 10) + "'" + PublicTools.WriteEnter(1);
-                    txtResult.Text += PublicTools.WriteTab(1) + "else" + PublicTools.WriteEnter(1);
-                    txtResult.Text += PublicTools.WriteTab(2) + "select @" + keycolumn.ToLower() + " = 'PK'+ replace(convert(varchar(10),getdate(),120),'-','')" + PublicTools.WriteEnter(1);
-                    txtResult.Text += PublicTools.WriteTab(3) + "+replace(space(" + (length - 10) + "-len(@maxno+1)),space(1),'0')+ltrim(str(@maxno+1))" + PublicTools.WriteEnter(1);
-
-                }
-                else
-                {
-                    txtResult.Text += PublicTools.WriteTab(1) + "declare @maxno int" + PublicTools.WriteEnter(1);
-                    txtResult.Text += PublicTools.WriteTab(1) + "select @maxno = max(" + keycolumn.ToLower() + ") from " + pTable.TableCode + PublicTools.WriteEnter(1);
-                    txtResult.Text += PublicTools.WriteTab(1) + "if @maxno is null" + PublicTools.WriteEnter(1);
-                    txtResult.Text += PublicTools.WriteTab(2) + "select @" + keycolumn.ToLower() + " = '" + defaultnum.Substring(defaultnum.Length - length, length) + "'" + PublicTools.WriteEnter(1);
-                    txtResult.Text += PublicTools.WriteTab(1) + "else" + PublicTools.WriteEnter(1);
-                    txtResult.Text += PublicTools.WriteTab(2) + "select @" + keycolumn.ToLower() + " = " + "replace(space(" + length + "-len(@maxno+1)),space(1),'0')+ltrim(str(@maxno+1))" + PublicTools.WriteEnter(1);
-                }
-                txtResult.Text += PublicTools.WriteTab(0) + "end" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(0) + "go" + PublicTools.WriteEnter(2);
+                
 
                 List<ColumnTable> pColumnTables = SqlBaseProvider.GetColumnTable(pTable.DBID, pTable.TableCode);
 
@@ -1196,7 +1197,14 @@ namespace DMS.SqlServer
                     {
                         if (keycolumn.IndexOf(item.ColumnCode) >= 0)
                         {
-                            txtResult.Text += PublicTools.WriteTab(1) + "@" + item.DisplayColumn.ToLower() + " " + item.DataType + " = null output," + PublicTools.WriteEnter(1);
+                            if (dataType.IndexOf("(") > 0)
+                            {
+                                txtResult.Text += PublicTools.WriteTab(1) + "@" + item.DisplayColumn.ToLower() + " " + item.DataType + " = null output," + PublicTools.WriteEnter(1);
+                            }
+                            else
+                            {
+                                txtResult.Text += PublicTools.WriteTab(1) + "@" + item.DisplayColumn.ToLower() + " " + item.DataType + " = null," + PublicTools.WriteEnter(1);
+                            }
                         }
                         else
                         {
@@ -1212,7 +1220,10 @@ namespace DMS.SqlServer
                 txtResult.Text += PublicTools.WriteTab(1) + "if @action = 2" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "begin" + PublicTools.WriteEnter(1);
 
-                txtResult.Text += PublicTools.WriteTab(2) + "exec P_Create_" + keycolumn + " @" + keycolumn.ToLower() + " output" + PublicTools.WriteEnter(1);
+                if (dataType.IndexOf("(") > 0)
+                {
+                    txtResult.Text += PublicTools.WriteTab(2) + "exec P_Create_" + keycolumn + " @" + keycolumn.ToLower() + " output" + PublicTools.WriteEnter(1);
+                }
 
                 txtResult.Text += PublicTools.WriteTab(2) + "insert into " + pTable.TableCode + "(";
                 foreach (ColumnTable item in pColumnTables)

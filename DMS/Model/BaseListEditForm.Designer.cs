@@ -55,12 +55,12 @@
             this.tsbPrint = new System.Windows.Forms.ToolStripButton();
             this.tsbExport = new System.Windows.Forms.ToolStripButton();
             this.ilTools = new System.Windows.Forms.ImageList(this.components);
-            this.etcMain = new GuFun.WinControls.ExTabControl();
+            this.etcMain = new WinControls.ExTabControl();
             this.tpList = new System.Windows.Forms.TabPage();
-            this.dgvList = new GuFun.WinControls.ExDataGridView();
-            this.plSearch = new GuFun.WinControls.ExPanel();
+            this.dgvList = new WinControls.ExDataGridView();
+            this.plSearch = new WinControls.ExPanel();
             this.tpEdit = new System.Windows.Forms.TabPage();
-            this.plEdit = new GuFun.WinControls.ExPanel();
+            this.plEdit = new WinControls.ExPanel();
             this.sfdExport = new System.Windows.Forms.SaveFileDialog();
             this.bsList = new System.Windows.Forms.BindingSource(this.components);
             this.tsMain.SuspendLayout();
@@ -463,12 +463,12 @@
         private System.Windows.Forms.ToolStripSeparator tssSave;
         private System.Windows.Forms.ToolStripButton tsbPrint;
         private System.Windows.Forms.ToolStripButton tsbExport;
-        protected GuFun.WinControls.ExTabControl etcMain;
+        protected WinControls.ExTabControl etcMain;
         protected System.Windows.Forms.TabPage tpList;
         protected System.Windows.Forms.TabPage tpEdit;
-        protected GuFun.WinControls.ExPanel plSearch;
-        protected GuFun.WinControls.ExDataGridView dgvList;
-        protected GuFun.WinControls.ExPanel plEdit;
+        protected WinControls.ExPanel plSearch;
+        protected WinControls.ExDataGridView dgvList;
+        protected WinControls.ExPanel plEdit;
         protected System.Windows.Forms.BindingSource bsList;
         private System.Windows.Forms.SaveFileDialog sfdExport;
     }

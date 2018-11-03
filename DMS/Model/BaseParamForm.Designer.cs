@@ -40,7 +40,7 @@
             this.tsbCancel = new System.Windows.Forms.ToolStripButton();
             this.tssSave = new System.Windows.Forms.ToolStripSeparator();
             this.tsbExport = new System.Windows.Forms.ToolStripButton();
-            this.plMain = new GuFun.WinControls.ExPanel();
+            this.plMain = new WinControls.ExPanel();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -48,7 +48,7 @@
             this.sfdExcel = new System.Windows.Forms.SaveFileDialog();
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMain = new GuFun.WinControls.ExDataGridView();
+            this.dgvMain = new WinControls.ExDataGridView();
             this.tsMain.SuspendLayout();
             this.plMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).BeginInit();
@@ -286,7 +286,7 @@
         private System.Windows.Forms.ToolStripButton tsbExport;
         protected System.Windows.Forms.ToolStripSeparator tssModify;
         protected System.Windows.Forms.ToolStripSeparator tssExit;
-        protected GuFun.WinControls.ExPanel plMain;
+        protected WinControls.ExPanel plMain;
         private System.Windows.Forms.Label lblID;
         protected System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblName;
@@ -294,7 +294,7 @@
         private System.Windows.Forms.SaveFileDialog sfdExcel;
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;
-        protected GuFun.WinControls.ExDataGridView dgvMain;
+        protected WinControls.ExDataGridView dgvMain;
         private System.Windows.Forms.ToolStripButton tsbDel;
     }
 }

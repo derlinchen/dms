@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMS", "DMS\DMS.csproj", "{FE89D881-C1DA-444F-BCE8-9DD889987C02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuFun.Utils", "GuFun.Utils\GuFun.Utils.csproj", "{0DD64F9E-A3BE-46C3-A7C0-60045A06BF07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{0DD64F9E-A3BE-46C3-A7C0-60045A06BF07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuFun.WinControls", "GuFun.WinControls\GuFun.WinControls.csproj", "{04CFB4AB-2B4F-4B97-A2A8-A081DDFFE2D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinControls", "WinControls\WinControls.csproj", "{04CFB4AB-2B4F-4B97-A2A8-A081DDFFE2D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuFun.WinCore", "GuFun.WinCore\GuFun.WinCore.csproj", "{6357278A-01F9-434A-90ED-63D2E606A4E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinCore", "WinCore\WinCore.csproj", "{6357278A-01F9-434A-90ED-63D2E606A4E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveUpdate", "LiveUpdate\LiveUpdate.csproj", "{56250140-00FC-42CD-B5A5-37141638E364}"
 EndProject

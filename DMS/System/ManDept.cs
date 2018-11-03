@@ -1,6 +1,6 @@
-﻿using GuFun.Utils;
-using GuFun.WinControls;
-using GuFun.WinCore;
+﻿using Utils;
+using WinControls;
+using WinCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -82,7 +82,7 @@ namespace DMS
 
         protected void OnBindData()
         {
-            tvDept.ComboTreeType = GuFun.WinControls.ComboTreeType.None;
+            tvDept.ComboTreeType = WinControls.ComboTreeType.None;
             tvDept.DataSource = SqlBaseProvider.SelectSysDept(true);
             tvDept.DisplayMember = "Dept_Name";
             tvDept.ValueMember = "Dept_ID";

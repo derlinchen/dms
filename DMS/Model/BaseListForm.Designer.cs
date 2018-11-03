@@ -33,8 +33,8 @@
             this.ilTools = new System.Windows.Forms.ImageList(this.components);
             this.sfdExport = new System.Windows.Forms.SaveFileDialog();
             this.plMain = new System.Windows.Forms.Panel();
-            this.dgvList = new GuFun.WinControls.ExDataGridView();
-            this.plSearch = new GuFun.WinControls.ExPanel();
+            this.dgvList = new WinControls.ExDataGridView();
+            this.plSearch = new WinControls.ExPanel();
             this.tsMain = new System.Windows.Forms.ToolStrip();
             this.tsbExit = new System.Windows.Forms.ToolStripButton();
             this.tssExit = new System.Windows.Forms.ToolStripSeparator();
@@ -359,8 +359,8 @@
         protected System.Windows.Forms.ToolStripButton tsbExport;
         private System.Windows.Forms.ToolStrip tsMain;
         private System.Windows.Forms.Panel plMain;
-        protected GuFun.WinControls.ExPanel plSearch;
-        protected GuFun.WinControls.ExDataGridView dgvList;
+        protected WinControls.ExPanel plSearch;
+        protected WinControls.ExDataGridView dgvList;
         protected System.Windows.Forms.ToolStripSeparator tssSearch;
         protected System.Windows.Forms.ToolStripSeparator tssModify;
     }
