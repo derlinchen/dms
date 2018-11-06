@@ -63,6 +63,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckComboBox\CheckComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckComboBox\CheckComboBox.Designer.cs">
+      <DependentUpon>CheckComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckComboBox\GripBounds.cs" />
+    <Compile Include="CheckComboBox\ListSelectionWrapper.cs" />
+    <Compile Include="CheckComboBox\NativeMethods.cs" />
+    <Compile Include="CheckComboBox\ObjectSelectionWrapper.cs" />
+    <Compile Include="CheckComboBox\Popup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckComboBox\Popup.Designer.cs">
+      <DependentUpon>Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckComboBox\PopupComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckComboBox\PopupComboBox.Designer.cs">
+      <DependentUpon>PopupComboBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomRenderer\Office2007Renderer\Office2007ColorTable.cs" />
     <Compile Include="CustomRenderer\Office2007Renderer\Office2007Helpers.cs" />
     <Compile Include="CustomRenderer\Office2007Renderer\Office2007Renderer.cs" />

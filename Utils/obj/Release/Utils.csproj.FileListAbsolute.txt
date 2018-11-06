@@ -3,4 +3,3 @@ E:\Source\C#\DMS\Utils\bin\Release\Utils.pdb
 E:\Source\C#\DMS\Utils\obj\Release\Utils.csproj.ResolveComReference.cache
 E:\Source\C#\DMS\Utils\obj\Release\Utils.dll
 E:\Source\C#\DMS\Utils\obj\Release\Utils.pdb
-E:\Source\C#\DMS\Utils\obj\Release\Utils.csprojResolveAssemblyReference.cache
