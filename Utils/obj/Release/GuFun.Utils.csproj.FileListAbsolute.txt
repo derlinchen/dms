@@ -1,5 +1,0 @@
-E:\Source\C#\DMS\GuFun.Utils\bin\Release\GuFun.Utils.dll
-E:\Source\C#\DMS\GuFun.Utils\bin\Release\GuFun.Utils.pdb
-E:\Source\C#\DMS\GuFun.Utils\obj\Release\GuFun.Utils.csproj.ResolveComReference.cache
-E:\Source\C#\DMS\GuFun.Utils\obj\Release\GuFun.Utils.dll
-E:\Source\C#\DMS\GuFun.Utils\obj\Release\GuFun.Utils.pdb

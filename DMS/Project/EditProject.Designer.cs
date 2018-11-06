@@ -118,7 +118,7 @@
             this.txtProjectName.Location = new System.Drawing.Point(310, 7);
             this.txtProjectName.Name = "txtProjectName";
             this.txtProjectName.Size = new System.Drawing.Size(160, 21);
-            this.txtProjectName.TabIndex = 3;
+            this.txtProjectName.TabIndex = 2;
             // 
             // lbProjectType
             // 
@@ -136,7 +136,7 @@
             this.ddlProjectType.Location = new System.Drawing.Point(535, 7);
             this.ddlProjectType.Name = "ddlProjectType";
             this.ddlProjectType.Size = new System.Drawing.Size(160, 20);
-            this.ddlProjectType.TabIndex = 5;
+            this.ddlProjectType.TabIndex = 3;
             // 
             // lbProjectManager
             // 
@@ -154,7 +154,7 @@
             this.ddlProjectManager.Location = new System.Drawing.Point(82, 37);
             this.ddlProjectManager.Name = "ddlProjectManager";
             this.ddlProjectManager.Size = new System.Drawing.Size(160, 20);
-            this.ddlProjectManager.TabIndex = 7;
+            this.ddlProjectManager.TabIndex = 4;
             // 
             // lbWorkDate
             // 
@@ -170,7 +170,7 @@
             this.txtWorkDate.Location = new System.Drawing.Point(310, 37);
             this.txtWorkDate.Name = "txtWorkDate";
             this.txtWorkDate.Size = new System.Drawing.Size(160, 21);
-            this.txtWorkDate.TabIndex = 9;
+            this.txtWorkDate.TabIndex = 5;
             // 
             // lbWorkUtil
             // 
@@ -188,7 +188,7 @@
             this.ddlWorkUnit.Location = new System.Drawing.Point(535, 37);
             this.ddlWorkUnit.Name = "ddlWorkUnit";
             this.ddlWorkUnit.Size = new System.Drawing.Size(160, 20);
-            this.ddlWorkUnit.TabIndex = 11;
+            this.ddlWorkUnit.TabIndex = 6;
             // 
             // lbProjectDesc
             // 
@@ -204,7 +204,7 @@
             this.txtProjectDesc.Location = new System.Drawing.Point(82, 100);
             this.txtProjectDesc.Name = "txtProjectDesc";
             this.txtProjectDesc.Size = new System.Drawing.Size(613, 85);
-            this.txtProjectDesc.TabIndex = 13;
+            this.txtProjectDesc.TabIndex = 8;
             this.txtProjectDesc.Text = "";
             // 
             // lbProjectStatus
@@ -223,7 +223,7 @@
             this.ddlProjectStatus.Location = new System.Drawing.Point(82, 67);
             this.ddlProjectStatus.Name = "ddlProjectStatus";
             this.ddlProjectStatus.Size = new System.Drawing.Size(160, 20);
-            this.ddlProjectStatus.TabIndex = 15;
+            this.ddlProjectStatus.TabIndex = 7;
             // 
             // EditProject
             // 

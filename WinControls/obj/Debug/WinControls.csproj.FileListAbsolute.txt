@@ -1,7 +1,0 @@
-E:\Source\C#\DMS\WinControls\bin\Debug\WinControls.dll
-E:\Source\C#\DMS\WinControls\bin\Debug\WinControls.pdb
-E:\Source\C#\DMS\WinControls\bin\Debug\Utils.dll
-E:\Source\C#\DMS\WinControls\bin\Debug\Utils.pdb
-E:\Source\C#\DMS\WinControls\obj\Debug\WinControls.csprojResolveAssemblyReference.cache
-E:\Source\C#\DMS\WinControls\obj\Debug\WinControls.dll
-E:\Source\C#\DMS\WinControls\obj\Debug\WinControls.pdb

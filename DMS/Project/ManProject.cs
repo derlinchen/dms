@@ -87,8 +87,8 @@ namespace DMS
 
         protected override void OnDeleteData()
         {
-            SqlConnection conn = null;
-            SqlCommand cmd = null;
+            SqlConnection conn = DBUtils.GetConnection();
+            SqlCommand cmd = DBUtils.GetCommand(); ;
             try
             {
                 base.OnDeleteData();
@@ -104,19 +104,21 @@ namespace DMS
                 SqlBaseProvider.SaveBusProject(item, DataProviderAction.Delete);
 
                 PdmDatabase db = SqlBaseProvider.GetDBByProject(id);
-                conn = DBUtils.GetConnection();
-                cmd = DBUtils.GetCommand();
-
-                cmd.Transaction = conn.BeginTransaction();
-                ArrayList paras = new ArrayList();
-                if (db.DBID > 0)
+                if (db != null)
                 {
-                    paras.Clear();
-                    paras.Add(DBUtils.MakeInParam("DBID", SqlDbType.Int, db.DBID));
-                    DBUtils.ExecuteNonQuery(conn, cmd, CommandType.StoredProcedure, "dbo.P_Delete_Info", paras);
+                    
+
+                    cmd.Transaction = conn.BeginTransaction();
+                    ArrayList paras = new ArrayList();
+                    if (db.DBID > 0)
+                    {
+                        paras.Clear();
+                        paras.Add(DBUtils.MakeInParam("DBID", SqlDbType.Int, db.DBID));
+                        DBUtils.ExecuteNonQuery(conn, cmd, CommandType.StoredProcedure, "dbo.P_Delete_Info", paras);
+                    }
+                    cmd.Transaction.Commit();
                 }
-                cmd.Transaction.Commit();
-                
+               
                 RefreshForm();
             }
             catch (Exception)

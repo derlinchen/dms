@@ -1,7 +1,0 @@
-E:\Source\C#\DMS\GuFun.WinControls\bin\Release\GuFun.WinControls.dll
-E:\Source\C#\DMS\GuFun.WinControls\bin\Release\GuFun.WinControls.pdb
-E:\Source\C#\DMS\GuFun.WinControls\bin\Release\GuFun.Utils.dll
-E:\Source\C#\DMS\GuFun.WinControls\bin\Release\GuFun.Utils.pdb
-E:\Source\C#\DMS\GuFun.WinControls\obj\Release\GuFun.WinControls.csprojResolveAssemblyReference.cache
-E:\Source\C#\DMS\GuFun.WinControls\obj\Release\GuFun.WinControls.dll
-E:\Source\C#\DMS\GuFun.WinControls\obj\Release\GuFun.WinControls.pdb
