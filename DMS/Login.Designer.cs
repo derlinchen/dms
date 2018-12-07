@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.txtManID = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.chbRemember = new System.Windows.Forms.CheckBox();
@@ -41,7 +40,7 @@
             // 
             // txtManID
             // 
-            this.txtManID.Location = new System.Drawing.Point(532, 412);
+            this.txtManID.Location = new System.Drawing.Point(454, 191);
             this.txtManID.MaxLength = 10;
             this.txtManID.Name = "txtManID";
             this.txtManID.Size = new System.Drawing.Size(117, 21);
@@ -50,7 +49,7 @@
             // txtPassword
             // 
             this.txtPassword.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.txtPassword.Location = new System.Drawing.Point(532, 448);
+            this.txtPassword.Location = new System.Drawing.Point(454, 236);
             this.txtPassword.MaxLength = 30;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -60,7 +59,7 @@
             // chbRemember
             // 
             this.chbRemember.AutoSize = true;
-            this.chbRemember.Location = new System.Drawing.Point(670, 451);
+            this.chbRemember.Location = new System.Drawing.Point(588, 239);
             this.chbRemember.Name = "chbRemember";
             this.chbRemember.Size = new System.Drawing.Size(15, 14);
             this.chbRemember.TabIndex = 4;
@@ -70,7 +69,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnLogin.Location = new System.Drawing.Point(509, 484);
+            this.btnLogin.Location = new System.Drawing.Point(380, 275);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(45, 23);
             this.btnLogin.TabIndex = 3;
@@ -81,7 +80,7 @@
             // btnView
             // 
             this.btnView.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnView.Location = new System.Drawing.Point(573, 484);
+            this.btnView.Location = new System.Drawing.Point(454, 275);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(75, 23);
             this.btnView.TabIndex = 5;
@@ -91,7 +90,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(667, 484);
+            this.btnCancel.Location = new System.Drawing.Point(563, 275);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(49, 23);
             this.btnCancel.TabIndex = 6;
@@ -102,10 +101,10 @@
             // pLogin
             // 
             this.pLogin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pLogin.Image = ((System.Drawing.Image)(resources.GetObject("pLogin.Image")));
+            this.pLogin.Image = global::DMS.Properties.Resources.login2;
             this.pLogin.Location = new System.Drawing.Point(0, 0);
             this.pLogin.Name = "pLogin";
-            this.pLogin.Size = new System.Drawing.Size(800, 600);
+            this.pLogin.Size = new System.Drawing.Size(730, 400);
             this.pLogin.TabIndex = 0;
             this.pLogin.TabStop = false;
             // 
@@ -113,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(730, 400);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnLogin);
@@ -135,12 +134,12 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pLogin;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.CheckBox chbRemember;
         public System.Windows.Forms.TextBox txtManID;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.PictureBox pLogin;
     }
 }

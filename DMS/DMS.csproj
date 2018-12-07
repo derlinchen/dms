@@ -464,6 +464,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\background\login.jpg" />
+    <Content Include="Resources\background\login2.jpg" />
     <Content Include="Resources\ribbon\1.gif" />
     <Content Include="Resources\ribbon\10.gif" />
     <Content Include="Resources\ribbon\11.gif" />
@@ -497,6 +498,7 @@
     <Content Include="Resources\tools\print.gif" />
     <Content Include="Resources\tools\save.gif" />
     <Content Include="Resources\tools\search.gif" />
+    <None Include="Resources\background\login1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
