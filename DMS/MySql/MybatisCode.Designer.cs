@@ -461,7 +461,7 @@
             this.MaximizeBox = true;
             this.MinimizeBox = true;
             this.Name = "MybatisCode";
-            this.Text = "生成存储过程";
+            this.Text = "生成代码";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MybatisCode_FormClosing);
             this.Load += new System.EventHandler(this.MybatisCode_Load);
             this.plCenter.ResumeLayout(false);

@@ -3,4 +3,3 @@ E:\Source\C#\DMS\Utils\bin\Debug\Utils.pdb
 E:\Source\C#\DMS\Utils\obj\Debug\Utils.csproj.ResolveComReference.cache
 E:\Source\C#\DMS\Utils\obj\Debug\Utils.dll
 E:\Source\C#\DMS\Utils\obj\Debug\Utils.pdb
-E:\Source\C#\dms\Utils\obj\Debug\Utils.csprojResolveAssemblyReference.cache

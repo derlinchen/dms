@@ -663,7 +663,7 @@ namespace DMS.MySql
 
                     if (code.IndexOf("a." + item.ColumnCode.ToLower() + " = " + item.Prefix.ToLower() + "." + item.RelaColumn.ToLower()) < 0)
                     {
-                        code += "a." + item.ColumnCode.ToLower() + " = " + item.Prefix.ToLower() + "." + item.RelaColumn.ToLower() + " and ";
+                        code += " and a." + item.ColumnCode.ToLower() + " = " + item.Prefix.ToLower() + "." + item.RelaColumn.ToLower() + " and ";
                         hasColumn = true;
                     }
                 }
@@ -672,7 +672,7 @@ namespace DMS.MySql
                     code = code.Substring(0, code.Length - 5);
                 }
                 code += PublicTools.WriteEnter(1);
-                code += PublicTools.WriteTab(3) + "order by a." + keycolumn.ToLower() + ";" + PublicTools.WriteEnter(1);
+                code += PublicTools.WriteTab(3) + "order by a." + keycolumn.ToLower() + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(1) + "</select>" + PublicTools.WriteEnter(2);
                 txtResult.Text += code;
 
@@ -716,11 +716,10 @@ namespace DMS.MySql
                     }
                 }
                 if (hasColumn)
-                    code = code.Substring(0, code.Length - 5);
+                    code = code.Substring(0, code.Length - 5) + PublicTools.WriteEnter(1);
                 else
-                    code = code.Substring(0, code.Length - 10);
-                code += PublicTools.WriteEnter(2);
-                code += PublicTools.WriteTab(3) + "order by a." + keycolumn.ToLower() + ";" + PublicTools.WriteEnter(1);
+                    code = code.Substring(0, code.Length - 9);
+                code += PublicTools.WriteTab(3) + "order by a." + keycolumn.ToLower() + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(1) + "</select>" + PublicTools.WriteEnter(2);
                 txtResult.Text += code;
 
@@ -766,7 +765,7 @@ namespace DMS.MySql
                 }
                 if (hasColumn)
                 {
-                    code = code.Substring(0, code.Length - 5);
+                    code = code.Substring(0, code.Length - 5) + PublicTools.WriteEnter(1);
                 }
                 else
                 {
@@ -802,7 +801,7 @@ namespace DMS.MySql
 
                 code = PublicTools.WriteTab(1) + "<delete id=\"delete" + txtClassName.Text + "\" statementType=\"CALLABLE\" parameterType=\"" + packageclass + "\" flushCache=\"true\">" + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(2) + "delete from " + pTable.TableCode.ToLower() + PublicTools.WriteEnter(1);
-                code += PublicTools.WriteTab(3) + "where " + keycolumn.ToLower() + "=" + "#{" + keycolumn.ToLower() + "}" + PublicTools.WriteEnter(1);
+                code += PublicTools.WriteTab(3) + "where " + keycolumn.ToLower() + "=" + "#{" + keycolumn.ToLower() + "};" + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(1) + "</delete>" + PublicTools.WriteEnter(2);
                 txtResult.Text += code;
 
