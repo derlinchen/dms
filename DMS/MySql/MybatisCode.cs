@@ -486,9 +486,9 @@ namespace DMS.MySql
                 txtResult.Text += PublicTools.WriteTab(1) + "}" + PublicTools.WriteEnter(2);
 
 
-                txtResult.Text += PublicTools.WriteTab(1) + "public PageInfo<" + txtClassName.Text + "> search" + txtClassName.Text + "(Integer pageNum, Integer pageSize," + txtClassName.Text + " item) {" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(2) + "PageHelper.offsetPage(pageNum, pageSize);" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(2) + "List<" + txtClassName.Text + "> lists = " + txtCatalog.Text.Trim() + "mapper.search" + txtClassName.Text + "(item);" + PublicTools.WriteEnter(1);
+                txtResult.Text += PublicTools.WriteTab(1) + "public PageInfo<" + txtClassName.Text + "> search" + txtClassName.Text + "(PageSearch<" + txtClassName.Text + "> item) {" + PublicTools.WriteEnter(1);
+                txtResult.Text += PublicTools.WriteTab(2) + "PageHelper.offsetPage(item.getPageNum(), item.getPageSize());" + PublicTools.WriteEnter(1);
+                txtResult.Text += PublicTools.WriteTab(2) + "List<" + txtClassName.Text + "> lists = " + txtCatalog.Text.Trim() + "mapper.search" + txtClassName.Text + "(item.getItem());" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(2) + "PageInfo<" + txtClassName.Text + "> pageInfo = new PageInfo<" + txtClassName.Text + ">(lists);" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(2) + "return pageInfo;" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "}" + PublicTools.WriteEnter(2);
@@ -565,13 +565,10 @@ namespace DMS.MySql
                 txtResult.Text += PublicTools.WriteTab(1) + "}" + PublicTools.WriteEnter(2);
 
                 txtResult.Text += PublicTools.WriteTab(1) + "@ApiOperation(value=\"获取分页" + tablename + "列表\")" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(1) + "@GetMapping(value=\"/search" + txtClassName.Text + "\")" + PublicTools.WriteEnter(1);
+                txtResult.Text += PublicTools.WriteTab(1) + "@PostMapping(value=\"/search" + txtClassName.Text + "\")" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "@ResponseBody" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(1) + "public List<" + txtClassName.Text + "> search" + txtClassName.Text + "(" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(2) + "@ApiParam(required = true, name = \"pageNum\", value = \"开始页\") @RequestParam(name = \"pageNum\", defaultValue = \"0\") Integer pageNum," + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(2) + "@ApiParam(required = true, name = \"pageSize\", value = \"每页长\") @RequestParam(name = \"pageSize\", defaultValue = \"10\") Integer pageSize," + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(2) + "@ApiParam(required=true, name=\"item\",value=\"" + tablename + "信息\") " + txtClassName.Text + " item) {" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(2) + "return " + txtCatalog.Text.Trim() + "service.search" + txtClassName.Text + "(pageNum,pageSize,item);" + PublicTools.WriteEnter(1);
+                txtResult.Text += PublicTools.WriteTab(1) + "public PageInfo<" + txtClassName.Text + "> search" + txtClassName.Text + "(@ApiParam(required=true, name=\"item\",value=\"查询" + tablename + "条件\") @RequestBody PageSearch<" + txtClassName.Text + "> item) {" + PublicTools.WriteEnter(1);
+                txtResult.Text += PublicTools.WriteTab(2) + "return " + txtCatalog.Text.Trim() + "service.search" + txtClassName.Text + "(item);" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "}" + PublicTools.WriteEnter(2);
 
 
