@@ -5,3 +5,4 @@ E:\Source\C#\DMS\WinControls\bin\Release\Utils.pdb
 E:\Source\C#\DMS\WinControls\obj\Release\WinControls.csprojResolveAssemblyReference.cache
 E:\Source\C#\DMS\WinControls\obj\Release\WinControls.dll
 E:\Source\C#\DMS\WinControls\obj\Release\WinControls.pdb
+E:\Source\c#\dms\WinControls\bin\Release\stdole.dll

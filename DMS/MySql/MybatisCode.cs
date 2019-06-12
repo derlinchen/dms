@@ -356,26 +356,46 @@ namespace DMS.MySql
                 foreach (ColumnTable c in pColumnTables)
                 {
                     txtResult.Text += PublicTools.WriteTab(1) + "@ApiModelProperty(value=\"" + c.ColumnName.ToLower() + "\")" + PublicTools.WriteEnter(1);
-                    txtResult.Text += PublicTools.WriteTab(1) + "private " + PublicTools.GetJavaType(c.GetColType()) + " " + c.DisplayColumn.ToLower() + ";" + PublicTools.WriteEnter(2);
+                    string propertyname = "";
+                    string[] columns = c.DisplayColumn.Split('_');
+                    for(int i = 0; i < columns.Length; i++)
+                    {
+                        propertyname += columns[i].Substring(0,1).ToUpper() + columns[i].Substring(1).ToLower();
+                    }
+                    propertyname = propertyname.Substring(0, 1).ToLower() + propertyname.Substring(1);
+                    txtResult.Text += PublicTools.WriteTab(1) + "private " + PublicTools.GetJavaType(c.GetColType()) + " " + propertyname + ";" + PublicTools.WriteEnter(2);
                 }
 
                 txtResult.Text += PublicTools.WriteTab(1) + "public " + txtClassName.Text + "() {" + PublicTools.WriteEnter(1);
 
                 foreach (ColumnTable c in pColumnTables)
                 {
-                    txtResult.Text += PublicTools.WriteTab(2) + "this." + c.DisplayColumn.ToLower() + " = " + PublicTools.GetInitType(c.GetColType()) + ";" + PublicTools.WriteEnter(1);
+                    string propertyname = "";
+                    string[] columns = c.DisplayColumn.Split('_');
+                    for (int i = 0; i < columns.Length; i++)
+                    {
+                        propertyname += columns[i].Substring(0, 1).ToUpper() + columns[i].Substring(1).ToLower();
+                    }
+                    propertyname = propertyname.Substring(0, 1).ToLower() + propertyname.Substring(1);
+                    txtResult.Text += PublicTools.WriteTab(2) + "this." + propertyname + " = " + PublicTools.GetInitType(c.GetColType()) + ";" + PublicTools.WriteEnter(1);
                 }
 
                 txtResult.Text += PublicTools.WriteTab(1) + "}" + PublicTools.WriteEnter(2);
 
                 foreach (ColumnTable c in pColumnTables)
                 {
-                    txtResult.Text += PublicTools.WriteTab(1) + "public " + PublicTools.GetJavaType(c.GetColType()) + " get" + PublicTools.GetFirstUpper(c.DisplayColumn.ToLower()) + "() {" + PublicTools.WriteEnter(1);
-                    txtResult.Text += PublicTools.WriteTab(2) + "return " + c.DisplayColumn.ToLower() + ";" + PublicTools.WriteEnter(1);
+                    string propertyname = "";
+                    string[] columns = c.DisplayColumn.Split('_');
+                    for (int i = 0; i < columns.Length; i++)
+                    {
+                        propertyname += columns[i].Substring(0, 1).ToUpper() + columns[i].Substring(1).ToLower();
+                    }
+                    propertyname = propertyname.Substring(0, 1).ToLower() + propertyname.Substring(1);
+                    txtResult.Text += PublicTools.WriteTab(1) + "public " + PublicTools.GetJavaType(c.GetColType()) + " get" + propertyname.Substring(0, 1).ToUpper() + propertyname.Substring(1) + "() {" + PublicTools.WriteEnter(1);
+                    txtResult.Text += PublicTools.WriteTab(2) + "return " + propertyname + ";" + PublicTools.WriteEnter(1);
                     txtResult.Text += PublicTools.WriteTab(1) + "}" + PublicTools.WriteEnter(2);
-
-                    txtResult.Text += PublicTools.WriteTab(1) + "public void set" + PublicTools.GetFirstUpper(c.DisplayColumn.ToLower()) + "(" + PublicTools.GetJavaType(c.GetColType()) + " " + c.DisplayColumn.ToLower() + ") {" + PublicTools.WriteEnter(1);
-                    txtResult.Text += PublicTools.WriteTab(2) + "this." + c.DisplayColumn.ToLower() + "=" + c.DisplayColumn.ToLower() + ";" + PublicTools.WriteEnter(1);
+                    txtResult.Text += PublicTools.WriteTab(1) + "public void set" + propertyname.Substring(0, 1).ToUpper() + propertyname.Substring(1) + "(" + PublicTools.GetJavaType(c.GetColType()) + " " + propertyname + ") {" + PublicTools.WriteEnter(1);
+                    txtResult.Text += PublicTools.WriteTab(2) + "this." + propertyname + "=" + propertyname + ";" + PublicTools.WriteEnter(1);
                     txtResult.Text += PublicTools.WriteTab(1) + "}" + PublicTools.WriteEnter(2);
                 }
                 txtResult.Text += "}" + PublicTools.WriteEnter(2);
@@ -611,6 +631,8 @@ namespace DMS.MySql
 
                 string package = "com." + txtPackage.Text;
                 string packageclass = package + ".entity";
+                string propertyname = "";
+                string[] columns = null;
                 if (!String.IsNullOrEmpty(txtCatalog.Text.Trim()))
                     packageclass += "." + txtCatalog.Text.Trim().ToLower();
                 packageclass += "." + txtClassName.Text;
@@ -624,9 +646,34 @@ namespace DMS.MySql
                 txtResult.Text = PublicTools.WriteTab(0) + "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(0) + "<!DOCTYPE mapper PUBLIC \" -//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\" >" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(0) + "<mapper namespace=\"" + packagemapper + "\" >" + PublicTools.WriteEnter(2);
-                
-                
-                string code = PublicTools.WriteTab(1) + "<select id=\"get" + txtClassName.Text + "\" statementType=\"CALLABLE\" parameterType=\"" + packageclass + "\" resultType=\"" + packageclass + "\" >" + PublicTools.WriteEnter(1);
+
+                string code = PublicTools.WriteTab(1) + "<resultMap id=\"BaseResultMap\" type=\""+ packageclass + "\" >" + PublicTools.WriteEnter(1);
+                foreach (ColumnTable item in pColumnTables)
+                {
+                    propertyname = "";
+                    columns = item.ColumnCode.Split('_');
+                    for (int i = 0; i < columns.Length; i++)
+                    {
+                        propertyname += columns[i].Substring(0, 1).ToUpper() + columns[i].Substring(1).ToLower();
+                    }
+                    propertyname = propertyname.Substring(0, 1).ToLower() + propertyname.Substring(1);
+
+                    if (item.ColumnCode.Equals(keycolumn))
+                    {
+                        code += PublicTools.WriteTab(2) + "<id column=\""+ item.ColumnCode + "\" property=\""+ propertyname + "\" jdbcType=\""+ PublicTools.GetJdbcType(item.GetColType()) + "\" />" + PublicTools.WriteEnter(1);
+                    }
+                    else
+                    {
+                        code += PublicTools.WriteTab(2) + "<result column=\"" + item.ColumnCode + "\" property=\"" + propertyname + "\" jdbcType=\"" + PublicTools.GetJdbcType(item.GetColType()) + "\" />" + PublicTools.WriteEnter(1);
+                    }
+
+                }
+                code += PublicTools.WriteTab(1) + "</resultMap>" + PublicTools.WriteEnter(2);
+                txtResult.Text += code;
+
+
+
+                code = PublicTools.WriteTab(1) + "<select id=\"get" + txtClassName.Text + "\" statementType=\"CALLABLE\" parameterType=\"" + packageclass + "\" resultMap=\"BaseResultMap\">" + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(2) + "select a.*";
                 hasColumn = false;
 
@@ -641,17 +688,26 @@ namespace DMS.MySql
                 code += " " + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(3) + "from ";
                 hasColumn = false;
+                string tablename = "";
                 foreach (ColumnTable item in pColumnTables)
                 {
-                    if (code.IndexOf(item.RelaTable.ToLower()) < 0)
+                    if (tablename.IndexOf(item.RelaTable.ToLower()) < 0)
                     {
-                        code += item.RelaTable.ToLower() + " " + item.Prefix.ToLower() + ", ";
+                        tablename += item.RelaTable.ToLower() + " " + item.Prefix.ToLower() + ", ";
                         hasColumn = true;
                     }
                 }
+                code += tablename;
                 code = code.Substring(0, code.Length - 2);
                 code += PublicTools.WriteEnter(1);
-                code += PublicTools.WriteTab(3) + "where a." + keycolumn.ToLower() + "=" + "#{" + keycolumn.ToLower() + "}";
+                columns = keycolumn.Split('_');
+                propertyname = "";
+                for (int i = 0; i < columns.Length; i++)
+                {
+                    propertyname += columns[i].Substring(0, 1).ToUpper() + columns[i].Substring(1).ToLower();
+                }
+                propertyname = propertyname.Substring(0, 1).ToLower() + propertyname.Substring(1);
+                code += PublicTools.WriteTab(3) + "where a." + keycolumn.ToLower() + "=" + "#{" + propertyname + "}";
                 hasColumn = false;
                 foreach (ColumnTable item in pColumnTables)
                 {
@@ -673,7 +729,7 @@ namespace DMS.MySql
                 code += PublicTools.WriteTab(1) + "</select>" + PublicTools.WriteEnter(2);
                 txtResult.Text += code;
 
-                code = PublicTools.WriteTab(1) + "<select id=\"get" + txtClassName.Text + "List\" statementType=\"CALLABLE\" parameterType=\"" + packageclass + "\" resultType=\"" + packageclass + "\" >" + PublicTools.WriteEnter(1);
+                code = PublicTools.WriteTab(1) + "<select id=\"get" + txtClassName.Text + "List\" statementType=\"CALLABLE\" parameterType=\"" + packageclass + "\" resultMap=\"BaseResultMap\">" + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(2) + "select a.*";
                 hasColumn = false;
                 foreach (ColumnTable item in pColumnTables)
@@ -688,14 +744,16 @@ namespace DMS.MySql
 
                 code  += PublicTools.WriteTab(3) + "from ";
                 hasColumn = false;
+                tablename = "";
                 foreach (ColumnTable item in pColumnTables)
                 {
-                    if (code.IndexOf(item.RelaTable.ToLower()) < 0)
+                    if (tablename.IndexOf(item.RelaTable.ToLower()) < 0)
                     {
-                        code += item.RelaTable.ToLower() + " " + item.Prefix.ToLower() + ", ";
+                        tablename += item.RelaTable.ToLower() + " " + item.Prefix.ToLower() + ", ";
                         hasColumn = true;
                     }
                 }
+                code += tablename;
                 code = code.Substring(0, code.Length - 2);
                 code += PublicTools.WriteEnter(1);
 
@@ -721,7 +779,7 @@ namespace DMS.MySql
                 txtResult.Text += code;
 
 
-                code = PublicTools.WriteTab(1) + "<select id=\"search" + txtClassName.Text + "\" statementType=\"CALLABLE\" parameterType=\"" + packageclass + "\" resultType=\"" + packageclass + "\" >" + PublicTools.WriteEnter(1);
+                code = PublicTools.WriteTab(1) + "<select id=\"search" + txtClassName.Text + "\" statementType=\"CALLABLE\" parameterType=\"" + packageclass + "\" resultMap=\"BaseResultMap\">" + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(2) + "select a.*";
                 hasColumn = false;
                 foreach (ColumnTable item in pColumnTables)
@@ -736,14 +794,16 @@ namespace DMS.MySql
 
                 code += PublicTools.WriteTab(3) + "from ";
                 hasColumn = false;
+                tablename = "";
                 foreach (ColumnTable item in pColumnTables)
                 {
-                    if (code.IndexOf(item.RelaTable.ToLower()) < 0)
+                    if (tablename.IndexOf(item.RelaTable.ToLower()) < 0)
                     {
-                        code += item.RelaTable.ToLower() + " " + item.Prefix.ToLower() + ", ";
+                        tablename += item.RelaTable.ToLower() + " " + item.Prefix.ToLower() + ", ";
                         hasColumn = true;
                     }
                 }
+                code += tablename;
                 code = code.Substring(0, code.Length - 2);
                 code += PublicTools.WriteEnter(1);
 
@@ -769,8 +829,17 @@ namespace DMS.MySql
                     code = code.Substring(0, code.Length - 10);
                     code += PublicTools.WriteTab(3) + "where 1 = 1" + PublicTools.WriteEnter(1);
                 }
-                code += PublicTools.WriteTab(3) + "<if test=\"" + keycolumn.ToLower() + " != null and " + keycolumn.ToLower() + " != ''\">" + PublicTools.WriteEnter(1);
-                code += PublicTools.WriteTab(3) + "and a." + keycolumn.ToLower() + "=" + "#{" + keycolumn.ToLower() + "}" + PublicTools.WriteEnter(1);
+
+                columns = keycolumn.Split('_');
+                propertyname = "";
+                for (int i = 0; i < columns.Length; i++)
+                {
+                    propertyname += columns[i].Substring(0, 1).ToUpper() + columns[i].Substring(1).ToLower();
+                }
+                propertyname = propertyname.Substring(0, 1).ToLower() + propertyname.Substring(1);
+
+                code += PublicTools.WriteTab(3) + "<if test=\"" + propertyname + " != null and " + propertyname + " != ''\">" + PublicTools.WriteEnter(1);
+                code += PublicTools.WriteTab(3) + "and a." + keycolumn.ToLower() + "=" + "#{" + propertyname + "}" + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(3) + "</if>" + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(1) + "</select>" + PublicTools.WriteEnter(2);
                 txtResult.Text += code;
@@ -789,7 +858,16 @@ namespace DMS.MySql
                 foreach (ColumnTable item in pColumnTables)
                 {
                     if (item.Prefix == "a")
-                        code += "#{" + item.DisplayColumn.ToLower() + "}, ";
+                    {
+                        propertyname = "";
+                        columns = item.DisplayColumn.Split('_');
+                        for (int i = 0; i < columns.Length; i++)
+                        {
+                            propertyname += columns[i].Substring(0, 1).ToUpper() + columns[i].Substring(1).ToLower();
+                        }
+                        propertyname = propertyname.Substring(0, 1).ToLower() + propertyname.Substring(1);
+                        code += "#{" + propertyname + "}, ";
+                    }
                 }
                 code = code.Substring(0, code.Length - 2) + ");";
                 code += PublicTools.WriteEnter(1);
@@ -798,7 +876,14 @@ namespace DMS.MySql
 
                 code = PublicTools.WriteTab(1) + "<delete id=\"delete" + txtClassName.Text + "\" statementType=\"CALLABLE\" parameterType=\"" + packageclass + "\" flushCache=\"true\">" + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(2) + "delete from " + pTable.TableCode.ToLower() + PublicTools.WriteEnter(1);
-                code += PublicTools.WriteTab(3) + "where " + keycolumn.ToLower() + "=" + "#{" + keycolumn.ToLower() + "};" + PublicTools.WriteEnter(1);
+                columns = keycolumn.Split('_');
+                propertyname = "";
+                for (int i = 0; i < columns.Length; i++)
+                {
+                    propertyname += columns[i].Substring(0, 1).ToUpper() + columns[i].Substring(1).ToLower();
+                }
+                propertyname = propertyname.Substring(0, 1).ToLower() + propertyname.Substring(1);
+                code += PublicTools.WriteTab(3) + "where " + keycolumn.ToLower() + "=" + "#{" + propertyname + "};" + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(1) + "</delete>" + PublicTools.WriteEnter(2);
                 txtResult.Text += code;
 
@@ -808,7 +893,16 @@ namespace DMS.MySql
                 foreach (ColumnTable item in pColumnTables)
                 {
                     if ((item.Prefix == "a") && (item.DisplayColumn != keycolumn))
-                        code += PublicTools.WriteEnter(1) + PublicTools.WriteTab(3) + item.DisplayColumn.ToLower() + " = #{" + item.DisplayColumn.ToLower() + "},";
+                    {
+                        propertyname = "";
+                        columns = item.DisplayColumn.Split('_');
+                        for (int i = 0; i < columns.Length; i++)
+                        {
+                            propertyname += columns[i].Substring(0, 1).ToUpper() + columns[i].Substring(1).ToLower();
+                        }
+                        propertyname = propertyname.Substring(0, 1).ToLower() + propertyname.Substring(1);
+                        code += PublicTools.WriteEnter(1) + PublicTools.WriteTab(3) + item.DisplayColumn.ToLower() + " = #{" + propertyname + "},";
+                    }
                 }
                 code = code.Substring(0, code.Length - 1) + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(3) + "where " + keycolumn.ToLower() + " = #{" + keycolumn.ToLower() + "};" + PublicTools.WriteEnter(1);
@@ -904,16 +998,35 @@ namespace DMS.MySql
                 if (columns.Rows.Count > 0)
                 {
                     string table = ddlTable.SelectedValue.ToString();
-                    string[] tables = table.Split('_');
-
-                    for (int i = 1; i < tables.Length; i++)
+                    if(table.IndexOf("T_") > 0)
                     {
-                        tablename += tables[i];
+                        string[] tables = table.Split('_');
+
+                        for (int i = 1; i < tables.Length; i++)
+                        {
+                            tablename += tables[i];
+                        }
+                        txtPrefix.Text = tables[1];
+                        txtCatalog.Text = tables[1].ToLower();
+                        txtClassName.Text = tablename;
+                        txtValue.Text = tablename.ToLower();
+
+                        
                     }
-                    txtPrefix.Text = tables[1];
-                    txtCatalog.Text = tables[1].ToLower();
-                    txtClassName.Text = tablename;
-                    txtValue.Text = tablename.ToLower();
+                    else
+                    {
+                        string[] tables = table.Split('_');
+                        for (int i = 0; i < tables.Length; i++)
+                        {
+                            tablename += tables[i].Substring(0, 1).ToUpper() + tables[i].Substring(1).ToLower();
+                        }
+
+                        txtPrefix.Text = tables[0].Substring(0, 1).ToUpper() + tables[0].Substring(1).ToLower();
+                        txtCatalog.Text = tables[0].ToLower();
+                        txtClassName.Text = tablename;
+                        txtValue.Text = tablename.ToLower();
+
+                    }
 
                     if (pkc != null)
                     {
@@ -947,6 +1060,7 @@ namespace DMS.MySql
                     {
                         txtSet.Text = pTable.TableSet;
                     }
+
                 }
             }
             catch (Exception ex)

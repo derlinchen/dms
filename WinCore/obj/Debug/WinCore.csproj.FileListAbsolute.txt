@@ -5,3 +5,4 @@ E:\Source\C#\DMS\WinCore\bin\Debug\Utils.pdb
 E:\Source\C#\DMS\WinCore\obj\Debug\WinCore.csprojResolveAssemblyReference.cache
 E:\Source\C#\DMS\WinCore\obj\Debug\WinCore.dll
 E:\Source\C#\DMS\WinCore\obj\Debug\WinCore.pdb
+E:\Source\c#\dms\WinCore\bin\Debug\stdole.dll

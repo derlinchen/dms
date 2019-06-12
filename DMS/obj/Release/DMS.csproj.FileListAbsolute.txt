@@ -50,3 +50,4 @@ E:\Source\C#\DMS\DMS\obj\Release\DMS.csproj.GenerateResource.Cache
 E:\Source\C#\DMS\DMS\obj\Release\DMS.exe
 E:\Source\C#\DMS\DMS\obj\Release\DMS.pdb
 E:\Source\C#\dms\DMS\obj\Release\DMS.MySql.MybatisCode.resources
+E:\Source\c#\dms\DMS\bin\Release\stdole.dll
