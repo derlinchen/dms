@@ -355,7 +355,12 @@ namespace DMS.MySql
 
                 foreach (ColumnTable c in pColumnTables)
                 {
-                    txtResult.Text += PublicTools.WriteTab(1) + "@ApiModelProperty(value=\"" + c.ColumnName.ToLower() + "\")" + PublicTools.WriteEnter(1);
+                    string example = "";
+                    if (PublicTools.GetJavaType(c.GetColType()).Equals("int"))
+                    {
+                        example = ", example=\"0\"";
+                    }
+                    txtResult.Text += PublicTools.WriteTab(1) + "@ApiModelProperty(value=\"" + c.ColumnName.ToLower() + "\""+ example + ")" + PublicTools.WriteEnter(1);
                     string propertyname = "";
                     string[] columns = c.DisplayColumn.Split('_');
                     for(int i = 0; i < columns.Length; i++)
@@ -998,7 +1003,7 @@ namespace DMS.MySql
                 if (columns.Rows.Count > 0)
                 {
                     string table = ddlTable.SelectedValue.ToString();
-                    if(table.IndexOf("T_") > 0)
+                    if(table.IndexOf("T_") >= 0)
                     {
                         string[] tables = table.Split('_');
 
