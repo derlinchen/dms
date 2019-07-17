@@ -577,21 +577,18 @@ namespace DMS.MySql
                 txtResult.Text += PublicTools.WriteTab(1) + "// region " + txtClassName.Text + " Methods" + PublicTools.WriteEnter(2);
                 txtResult.Text += PublicTools.WriteTab(1) + "@ApiOperation(value=\"获取单条" + tablename + "信息\")" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "@GetMapping(value=\"/get" + txtClassName.Text + "\")" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(1) + "@ResponseBody" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "public " + txtClassName.Text + " get" + txtClassName.Text + "(@ApiParam(required=true, name=\"item\",value=\"" + tablename + "信息\") " + txtClassName.Text + " item) {" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(2) + "return " + txtCatalog.Text.Trim() + "service.get" + txtClassName.Text +"(item);"+ PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "}" + PublicTools.WriteEnter(2);
 
                 txtResult.Text += PublicTools.WriteTab(1) + "@ApiOperation(value=\"获取" + tablename + "列表\")" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "@GetMapping(value=\"/get" + txtClassName.Text + "List\")" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(1) + "@ResponseBody" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "public List<" + txtClassName.Text + "> get" + txtClassName.Text + "List(@ApiParam(required=true, name=\"item\",value=\"" + tablename + "信息\") " + txtClassName.Text + " item) {" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(2) + "return " + txtCatalog.Text.Trim() + "service.get" + txtClassName.Text + "List(item);" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "}" + PublicTools.WriteEnter(2);
 
                 txtResult.Text += PublicTools.WriteTab(1) + "@ApiOperation(value=\"获取分页" + tablename + "列表\")" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "@PostMapping(value=\"/search" + txtClassName.Text + "\")" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(1) + "@ResponseBody" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "public PageInfo<" + txtClassName.Text + "> search" + txtClassName.Text + "(@ApiParam(required=true, name=\"item\",value=\"查询" + tablename + "条件\") @RequestBody PageSearch<" + txtClassName.Text + "> item) {" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(2) + "return " + txtCatalog.Text.Trim() + "service.search" + txtClassName.Text + "(item);" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "}" + PublicTools.WriteEnter(2);
@@ -599,7 +596,6 @@ namespace DMS.MySql
 
                 txtResult.Text += PublicTools.WriteTab(1) + "@ApiOperation(value=\"保存" + tablename + "列表信息\")" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "@PostMapping(value=\"/save" + txtClassName.Text + "\")" + PublicTools.WriteEnter(1);
-                txtResult.Text += PublicTools.WriteTab(1) + "@ResponseBody" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "public ReturnValue save" + txtClassName.Text + "(@ApiParam(required=true, name=\"item\",value=\"" + tablename + "信息\") @RequestBody " + txtClassName.Text + " item) {" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(2) + "return " + txtCatalog.Text.Trim() + "service.save" + txtClassName.Text + "(item);" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(1) + "}" + PublicTools.WriteEnter(2);
