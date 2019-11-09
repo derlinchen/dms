@@ -648,33 +648,33 @@ namespace DMS.MySql
                 txtResult.Text += PublicTools.WriteTab(0) + "<!DOCTYPE mapper PUBLIC \" -//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\" >" + PublicTools.WriteEnter(1);
                 txtResult.Text += PublicTools.WriteTab(0) + "<mapper namespace=\"" + packagemapper + "\" >" + PublicTools.WriteEnter(2);
 
-                string code = PublicTools.WriteTab(1) + "<resultMap id=\"BaseResultMap\" type=\""+ packageclass + "\" >" + PublicTools.WriteEnter(1);
-                foreach (ColumnTable item in pColumnTables)
-                {
-                    propertyname = "";
-                    columns = item.ColumnCode.Split('_');
-                    for (int i = 0; i < columns.Length; i++)
-                    {
-                        propertyname += columns[i].Substring(0, 1).ToUpper() + columns[i].Substring(1).ToLower();
-                    }
-                    propertyname = propertyname.Substring(0, 1).ToLower() + propertyname.Substring(1);
+                //string code = PublicTools.WriteTab(1) + "<resultMap id=\"BaseResultMap\" type=\""+ packageclass + "\" >" + PublicTools.WriteEnter(1);
+                //foreach (ColumnTable item in pColumnTables)
+                //{
+                //    propertyname = "";
+                //    columns = item.ColumnCode.Split('_');
+                //    for (int i = 0; i < columns.Length; i++)
+                //    {
+                //        propertyname += columns[i].Substring(0, 1).ToUpper() + columns[i].Substring(1).ToLower();
+                //    }
+                //    propertyname = propertyname.Substring(0, 1).ToLower() + propertyname.Substring(1);
 
-                    if (item.ColumnCode.Equals(keycolumn))
-                    {
-                        code += PublicTools.WriteTab(2) + "<id column=\""+ item.ColumnCode + "\" property=\""+ propertyname + "\" jdbcType=\""+ PublicTools.GetJdbcType(item.GetColType()) + "\" />" + PublicTools.WriteEnter(1);
-                    }
-                    else
-                    {
-                        code += PublicTools.WriteTab(2) + "<result column=\"" + item.ColumnCode + "\" property=\"" + propertyname + "\" jdbcType=\"" + PublicTools.GetJdbcType(item.GetColType()) + "\" />" + PublicTools.WriteEnter(1);
-                    }
+                //    if (item.ColumnCode.Equals(keycolumn))
+                //    {
+                //        code += PublicTools.WriteTab(2) + "<id column=\""+ item.ColumnCode + "\" property=\""+ propertyname + "\" jdbcType=\""+ PublicTools.GetJdbcType(item.GetColType()) + "\" />" + PublicTools.WriteEnter(1);
+                //    }
+                //    else
+                //    {
+                //        code += PublicTools.WriteTab(2) + "<result column=\"" + item.ColumnCode + "\" property=\"" + propertyname + "\" jdbcType=\"" + PublicTools.GetJdbcType(item.GetColType()) + "\" />" + PublicTools.WriteEnter(1);
+                //    }
 
-                }
-                code += PublicTools.WriteTab(1) + "</resultMap>" + PublicTools.WriteEnter(2);
-                txtResult.Text += code;
+                //}
+                //code += PublicTools.WriteTab(1) + "</resultMap>" + PublicTools.WriteEnter(2);
+                //txtResult.Text += code;
 
 
 
-                code = PublicTools.WriteTab(1) + "<select id=\"get" + txtClassName.Text + "\" statementType=\"CALLABLE\" parameterType=\"" + packageclass + "\" resultMap=\"BaseResultMap\">" + PublicTools.WriteEnter(1);
+                string code = PublicTools.WriteTab(1) + "<select id=\"get" + txtClassName.Text + "\" statementType=\"CALLABLE\" parameterType=\"" + packageclass + "\" resultMap=\""+ packageclass + "\">" + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(2) + "select a.*";
                 hasColumn = false;
 
@@ -730,7 +730,7 @@ namespace DMS.MySql
                 code += PublicTools.WriteTab(1) + "</select>" + PublicTools.WriteEnter(2);
                 txtResult.Text += code;
 
-                code = PublicTools.WriteTab(1) + "<select id=\"get" + txtClassName.Text + "List\" statementType=\"CALLABLE\" parameterType=\"" + packageclass + "\" resultMap=\"BaseResultMap\">" + PublicTools.WriteEnter(1);
+                code = PublicTools.WriteTab(1) + "<select id=\"get" + txtClassName.Text + "List\" statementType=\"CALLABLE\" parameterType=\"" + packageclass + "\" resultMap=\"" + packageclass + "\">" + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(2) + "select a.*";
                 hasColumn = false;
                 foreach (ColumnTable item in pColumnTables)
@@ -780,7 +780,7 @@ namespace DMS.MySql
                 txtResult.Text += code;
 
 
-                code = PublicTools.WriteTab(1) + "<select id=\"search" + txtClassName.Text + "\" statementType=\"CALLABLE\" parameterType=\"" + packageclass + "\" resultMap=\"BaseResultMap\">" + PublicTools.WriteEnter(1);
+                code = PublicTools.WriteTab(1) + "<select id=\"search" + txtClassName.Text + "\" statementType=\"CALLABLE\" parameterType=\"" + packageclass + "\" resultMap=\"" + packageclass + "\">" + PublicTools.WriteEnter(1);
                 code += PublicTools.WriteTab(2) + "select a.*";
                 hasColumn = false;
                 foreach (ColumnTable item in pColumnTables)
